@@ -1,0 +1,4 @@
+Company,Contact Name,Role,Website URL,Site Observation (1 line),Email,Email Verified?,Source,Status,Next Action
+Front Range Recruiting,,Director of Operations,http://httpforever.com,"Front Range Recruiting's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",,No email,LinkedIn Search,Not Contacted,Verify email + send 1st
+Cedar Park Family Counseling,,Owner,,I went looking for Cedar Park Family Counseling's website and couldn’t find one — anyone searching for you online comes up empty.,cedarparkcounseling@gmail.com,Verified,LinkedIn Search,Not Contacted,Send 1st email
+Summit Consulting Group,,Founder,http://example.com,Summit Consulting Group's homepage is pretty sparse — there’s very little there for someone deciding whether to reach out.,info@example.com,Verified,LinkedIn Search,Not Contacted,Send 1st email

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magni — Daily Review Queue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="wordmark">Magni<span class="dot">.</span></span>
+      <span class="sub">Daily Review Queue</span>
+    </div>
+    <div class="toolbar">
+      <div class="counts">
+        <span class="count"><b id="c-pending">0</b> to review</span>
+        <span class="count sent"><b id="c-sent">0</b> sent</span>
+        <span class="count"><b id="c-skip">0</b> skipped</span>
+      </div>
+      <input id="search" type="search" placeholder="Filter name / vertical / city…" />
+      <a class="linkbtn" href="daily-list.csv" download>Download CSV</a>
+      <button class="linkbtn" id="export">Export sent/skipped</button>
+    </div>
+  </header>
+
+  <main>
+    <p class="lede">
+      Each practice qualified on a real, checked weakness in its own website — with
+      one grounded observation drafted for you. <b>Confirm it's true on their site,
+      rewrite it in your voice, then send it yourself.</b> Nothing here is sent
+      automatically.
+    </p>
+    <div id="queue"></div>
+    <div id="empty" class="empty" hidden>
+      <p>No practices in today's queue.</p>
+      <p class="muted">Add finds to <code>inbox.csv</code> and run <code>python3 run.py</code> to populate it.</p>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

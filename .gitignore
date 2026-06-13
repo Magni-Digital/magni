@@ -1,0 +1,8 @@
+# secrets never go in git
+*.local
+.env
+# per-run state + caches (machine-local; regenerated each run)
+state/email_cache.json
+__pycache__/
+*.pyc
+.DS_Store

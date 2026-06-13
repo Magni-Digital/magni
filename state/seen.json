@@ -1,0 +1,26 @@
+{
+  "brightsmile.example": {
+    "first_seen_iso": "2026-06-13T11:03:05.705231+00:00",
+    "surfaced_count": 0,
+    "disposition": "sent",
+    "last_surfaced_iso": "2026-06-13T11:03:05.705231+00:00"
+  },
+  "httpforever.com": {
+    "first_seen_iso": "2026-06-13T11:03:05.705231+00:00",
+    "surfaced_count": 1,
+    "disposition": "surfaced",
+    "last_surfaced_iso": "2026-06-13T11:03:05.705231+00:00"
+  },
+  "name:cedar-park-family-counseling-austin-tx": {
+    "first_seen_iso": "2026-06-13T11:03:05.705231+00:00",
+    "surfaced_count": 1,
+    "disposition": "surfaced",
+    "last_surfaced_iso": "2026-06-13T11:03:05.705231+00:00"
+  },
+  "example.com": {
+    "first_seen_iso": "2026-06-13T11:03:05.705231+00:00",
+    "surfaced_count": 1,
+    "disposition": "surfaced",
+    "last_surfaced_iso": "2026-06-13T11:03:05.705231+00:00"
+  }
+}
