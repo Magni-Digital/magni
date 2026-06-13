@@ -171,6 +171,33 @@ function disposition(p, status, observation, cardEl) {
   renderActions(cardEl.querySelector('[data-actions]'), p, cardEl.querySelector('textarea.obs'), cardEl);
   updateCounts();
   toast(status === 'sent' ? 'Marked sent ✓' : 'Skipped');
+
+  // On SEND, persist to HubSpot (the backend). Sending = her confirmation of the
+  // site + observation, so the domain write is operator-gated. Best-effort: a
+  // failure (e.g. token not set, local preview) never loses the local disposition.
+  if (status === 'sent') {
+    saveToHubSpot({
+      hsCompanyId: p.hs_company_id || '',
+      domain: p.domain || '',
+      companyName: p.name || '',
+      email: (p.contact && p.contact.email) || p.verified_email || '',
+      observation, status,
+    });
+  }
+}
+
+async function saveToHubSpot(payload) {
+  try {
+    const r = await fetch('/api/hubspot', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const d = await r.json().catch(() => ({ ok: r.ok }));
+    if (d.ok) toast('Saved to HubSpot ✓');
+    else toast('Sent saved locally (HubSpot: ' + (d.error || 'unavailable') + ')');
+  } catch (_) {
+    toast('Sent saved locally (HubSpot offline)');
+  }
 }
 
 function undo(p, cardEl) {
