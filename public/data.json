@@ -1,101 +1,66 @@
 {
-  "generated": "2026-06-13T11:03:05.705231+00:00",
+  "generated": "2026-06-13T14:44:41.589940+00:00",
   "queue_date": "2026-06-13",
-  "count": 3,
+  "count": 2,
   "practices": [
     {
-      "name": "Front Range Recruiting",
-      "practice_type": "staffing",
-      "domain": "httpforever.com",
-      "website_raw": "http://httpforever.com",
-      "location": "Phoenix AZ",
-      "contact": {
-        "name": "",
-        "role": "Director of Operations",
-        "email": ""
-      },
-      "weakness_score": 78,
-      "site_high_count": 2,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "no_viewport",
-          "label": "No mobile viewport tag",
-          "confidence": "high",
-          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "Front Range Recruiting's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
-      "source": "LinkedIn Search",
-      "dedupe_key": "httpforever.com",
-      "queue_date": "2026-06-13"
-    },
-    {
-      "name": "Cedar Park Family Counseling",
+      "name": "A Noble Counseling",
       "practice_type": "mental_health",
-      "domain": "",
-      "website_raw": "",
-      "location": "Austin TX",
+      "domain": "anoblecounseling.com",
+      "website_raw": "https://anoblecounseling.com",
+      "location": "Boulder Colorado",
       "contact": {
         "name": "",
-        "role": "Owner",
-        "email": "cedarparkcounseling@gmail.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_website",
-          "label": "No website at all",
-          "confidence": "high",
-          "evidence_str": "Cedar Park Family Counseling has no website at all — anyone searching for them online finds nothing."
-        }
-      ],
-      "draft_observation": "I went looking for Cedar Park Family Counseling's website and couldn’t find one — anyone searching for you online comes up empty.",
-      "observation_cited_signal": "no_website",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "cedarparkcounseling@gmail.com",
-      "source": "LinkedIn Search",
-      "dedupe_key": "name:cedar-park-family-counseling-austin-tx",
-      "queue_date": "2026-06-13"
-    },
-    {
-      "name": "Summit Consulting Group",
-      "practice_type": "consulting",
-      "domain": "example.com",
-      "website_raw": "http://example.com",
-      "location": "Denver CO",
-      "contact": {
-        "name": "",
-        "role": "Founder",
-        "email": "info@example.com"
+        "role": "",
+        "email": ""
       },
       "weakness_score": 33,
       "site_high_count": 0,
       "evidence": [
         {
-          "id": "thin_site",
-          "label": "Very thin homepage",
+          "id": "no_booking",
+          "label": "No online booking",
           "confidence": "med",
-          "evidence_str": "The homepage has only ~21 words of content and 1 links — barely more than a placeholder."
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on Squarespace",
+          "confidence": "low",
+          "evidence_str": "The site is built on Squarespace."
+        }
+      ],
+      "draft_observation": "There’s no way to book or request an appointment from A Noble Counseling's site.",
+      "observation_cited_signal": "no_booking",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "HubSpot",
+      "domain_provisional": false,
+      "hs_company_id": "54997023137",
+      "dedupe_key": "anoblecounseling.com",
+      "queue_date": "2026-06-13"
+    },
+    {
+      "name": "A Better Life Counseling Center",
+      "practice_type": "mental_health",
+      "domain": "abetterlifecc.com",
+      "website_raw": "https://abetterlifecc.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "",
+        "role": "",
+        "email": ""
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
         },
         {
           "id": "no_cta",
@@ -104,14 +69,16 @@
           "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
         }
       ],
-      "draft_observation": "Summit Consulting Group's homepage is pretty sparse — there’s very little there for someone deciding whether to reach out.",
-      "observation_cited_signal": "thin_site",
+      "draft_observation": "There’s no way to book or request an appointment from A Better Life Counseling Center's site.",
+      "observation_cited_signal": "no_booking",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@example.com",
-      "source": "LinkedIn Search",
-      "dedupe_key": "example.com",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "HubSpot",
+      "domain_provisional": true,
+      "hs_company_id": "54998648504",
+      "dedupe_key": "abetterlifecc.com",
       "queue_date": "2026-06-13"
     }
   ]

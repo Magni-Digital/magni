@@ -79,6 +79,7 @@ code { background: #eef2f5; padding: 1px 5px; border-radius: 5px; font-size: 12.
 .badge.email-no_email, .badge.email-unverified { background: #eef2f5; color: var(--muted); }
 .badge.email-undeliverable, .badge.email-bad { background: #fbeaea; color: var(--bad); }
 .badge.lang { background: #efeaf7; color: #5a4b86; }
+.badge.prov { background: var(--warn-bg); color: var(--warn); border: 1px solid #f0d8b8; }
 .contact { font-size: 13px; color: var(--muted); margin-top: 8px; }
 .contact a { color: var(--accent); text-decoration: none; }
 

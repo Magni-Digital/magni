@@ -7,6 +7,9 @@ state/email_cache.json
 state/hubspot_token.local
 state/prune_preview_*.csv
 state/dispositions.json
+state/keepers_companies.json
+state/resolved_batch.json
+state/hubspot_candidates.json
 __pycache__/
 *.pyc
 .DS_Store

@@ -22,5 +22,17 @@
     "surfaced_count": 1,
     "disposition": "surfaced",
     "last_surfaced_iso": "2026-06-13T11:03:05.705231+00:00"
+  },
+  "anoblecounseling.com": {
+    "first_seen_iso": "2026-06-13T14:44:41.589940+00:00",
+    "surfaced_count": 1,
+    "disposition": "surfaced",
+    "last_surfaced_iso": "2026-06-13T14:44:41.589940+00:00"
+  },
+  "abetterlifecc.com": {
+    "first_seen_iso": "2026-06-13T14:44:41.589940+00:00",
+    "surfaced_count": 1,
+    "disposition": "surfaced",
+    "last_surfaced_iso": "2026-06-13T14:44:41.589940+00:00"
   }
 }

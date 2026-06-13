@@ -125,6 +125,38 @@ def _attach(cand, present, meta, qualify_status, lang, verdict=None):
     return cand
 
 
+HS_CANDIDATES = STATE / "hubspot_candidates.json"
+
+
+def _load_hubspot_candidates():
+    """HubSpot keeper practices whose domain was resolved by enrichment. Loaded
+    as raw candidates (re-qualified fresh each run). Carries the provisional flag
+    + hs_company_id so the review page can flag 'confirm domain' and a later
+    operator confirmation can write back to the right HubSpot record."""
+    if not HS_CANDIDATES.exists():
+        return []
+    try:
+        rows = json.loads(HS_CANDIDATES.read_text())
+    except ValueError:
+        return []
+    out = []
+    for r in rows:
+        if not r.get("domain"):
+            continue
+        out.append({
+            "name": r.get("name", ""), "domain": r["domain"],
+            "website_raw": r.get("website_raw") or "https://" + r["domain"],
+            "website_status": "unknown",
+            "practice_type": r.get("practice_type", ""),
+            "location": r.get("location", ""),
+            "contact_name": r.get("contact_name", ""), "role": r.get("role", ""),
+            "email": r.get("email", ""), "source": "HubSpot",
+            "hs_company_id": r.get("hs_company_id", ""),
+            "domain_provisional": bool(r.get("domain_provisional")),
+        })
+    return out
+
+
 def _load_dispositions():
     if DISPOS_PATH.exists():
         try:
@@ -154,6 +186,8 @@ def to_entry(rec, queue_date):
         "email_verified": rec.get("email_verified", "no_email"),
         "verified_email": rec.get("verified_email", ""),
         "source": rec.get("source", ""),
+        "domain_provisional": bool(rec.get("domain_provisional")),
+        "hs_company_id": rec.get("hs_company_id", ""),
         "dedupe_key": rec.get("dedupe_key") or D.key_for(rec),
         "queue_date": queue_date,
     }
@@ -192,12 +226,15 @@ def main():
     queue_date = now.date().isoformat()
     current_year = now.year
 
-    # 1) ingest
+    # 1) ingest — inbox.csv + CRM xlsx + any HubSpot-resolved candidates
     cands, prior = load_candidates(INBOX, CRM)
+    hs_cands = _load_hubspot_candidates()
+    cands += hs_cands
     if args.limit:
         cands = cands[:args.limit]
     print(f"▸ ingested {len(cands)} candidates to qualify "
-          f"({len(prior)} already-contacted CRM rows folded into seen-set)")
+          f"({len(hs_cands)} from HubSpot, "
+          f"{len(prior)} already-contacted CRM rows folded into seen-set)")
 
     # 2) qualify
     for i, c in enumerate(cands, 1):

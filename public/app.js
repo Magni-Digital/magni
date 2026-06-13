@@ -90,6 +90,9 @@ function card(p, i) {
   const ev = p.email_verified || 'no_email';
   const emailBadge = `<span class="badge email-${esc(ev)}">${esc(EMAIL_LABEL[ev] || ev)}</span>`;
   const langBadge = p.observation_lang === 'es' ? '<span class="badge lang">ES</span>' : '';
+  const provBadge = p.domain_provisional
+    ? '<span class="badge prov" title="This website was auto-matched from a web search — confirm it really is their site before sending.">⚠ confirm site is theirs</span>'
+    : '';
 
   const c = p.contact || {};
   const contactLine = (c.name || c.role || c.email) ? `
@@ -115,7 +118,7 @@ function card(p, i) {
         </div>
         <div class="score-chip"><div class="n">${p.weakness_score || 0}</div><div class="l">weak</div></div>
       </div>
-      <div class="linkrow">${site} ${emailBadge} ${langBadge}</div>
+      <div class="linkrow">${site} ${emailBadge} ${langBadge} ${provBadge}</div>
       ${contactLine}
     </div>
     <div class="card-body">
