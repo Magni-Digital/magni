@@ -3,6 +3,10 @@
 .env
 # per-run state + caches (machine-local; regenerated each run)
 state/email_cache.json
+# HubSpot token + transient audit exports (never commit CRM data / secrets)
+state/hubspot_token.local
+state/prune_preview_*.csv
+state/dispositions.json
 __pycache__/
 *.pyc
 .DS_Store
