@@ -1,0 +1,55 @@
+name: Daily review queue
+
+# Refreshes the review queue every morning and commits the result. Cloudflare
+# Pages (connected to this repo) then auto-deploys the updated public/ folder.
+#
+# Runs ~2 AM Central. GitHub's cron is fixed UTC, so the wall-clock time drifts
+# ±1h with US daylight saving — fine for an overnight job. You can also run it
+# any time by hand: Actions tab → "Daily review queue" → "Run workflow".
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   # 07:00 UTC ≈ 2 AM Central
+  workflow_dispatch: {}     # manual "Run workflow" button
+
+permissions:
+  contents: write           # lets the job commit the refreshed list back
+
+concurrency:
+  group: daily-queue
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Build today's queue
+        env:
+          # Optional. Set these as repo secrets for nicer drafts / real
+          # deliverability checks. Unset → true-template drafts + MX-only checks.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EMAIL_VERIFY_API_URL: ${{ secrets.EMAIL_VERIFY_API_URL }}
+          EMAIL_VERIFY_API_KEY: ${{ secrets.EMAIL_VERIFY_API_KEY }}
+        run: python3 run.py
+
+      - name: Commit the refreshed queue
+        run: |
+          git config user.name "magni-bot"
+          git config user.email "gc@glasscanopy.com"
+          git add public/data.json public/daily-list.csv state/seen.json
+          if git diff --staged --quiet; then
+            echo "No changes today."
+          else
+            git commit -m "daily: refresh review queue ($(date -u +%F))"
+            git pull --rebase --autostash || true
+            git push
+          fi
