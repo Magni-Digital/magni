@@ -106,6 +106,33 @@ state/
 public/                   ← the review page (static site) + data.json + daily-list.csv
 ```
 
+## HubSpot (the backend) + keeper enrichment
+
+HubSpot is the lead store + (eventually) where notes/status persist. Token lives
+in `state/hubspot_token.local` (gitignored).
+
+- `hs_inventory.py` — read-only audit of what's in HubSpot.
+- `hs_prune.py` — score contacts/companies against the ICP (`pipeline/icp.py`);
+  preview by default, `--live` soft-archives off-target (recoverable 90 days).
+- The cleaned, in-ICP practices ("keepers") mostly lack a website/email — the two
+  fields the tool needs. They're exported to **`state/keepers_to_enrich.csv`**.
+
+**Enrichment round-trip (you run the bulk enrichment):**
+1. Take `state/keepers_to_enrich.csv` (cols: `hs_company_id, company, city, state`).
+2. Run it through your enrichment tool (Apollo / Clay / ZoomInfo) to get each
+   practice's **website** and an **owner email**.
+3. Save the result as **`state/keepers_enriched.csv`** — any of these headers work:
+   `hs_company_id, company|name, domain|website, email, contact_name, city, state, practice_type`.
+4. `python3 run.py` — enriched keepers are qualified + observed + verified and
+   join the daily queue (tagged `HubSpot+enriched`, `hs_company_id` carried through).
+
+Rows with no website are skipped by the qualifier (a no-website practice is a
+*lead* but needs a human glance — it's not auto-claimed).
+
+**CRM write-back** (writing resolved domains / notes / sent-status to HubSpot) is
+intentionally NOT automated by the agent — it's gated on operator confirmation or
+an explicit permission you grant, so inferred data never lands in the CRM blind.
+
 ## What it deliberately does NOT do
 
 No auto-sending, no sequences, no CRM writes, no scraping LinkedIn for you, no

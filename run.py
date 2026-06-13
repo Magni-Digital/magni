@@ -126,6 +126,40 @@ def _attach(cand, present, meta, qualify_status, lang, verdict=None):
 
 
 HS_CANDIDATES = STATE / "hubspot_candidates.json"
+ENRICHED_KEEPERS = STATE / "keepers_enriched.csv"
+
+
+def _load_enriched_keepers():
+    """Keeper practices after bulk enrichment (Apollo/Clay/ZoomInfo export).
+    Drop the file at state/keepers_enriched.csv with flexible headers — any of:
+      hs_company_id, company|name, domain|website, email, contact_name,
+      city, state, practice_type
+    Each becomes a candidate (re-qualified fresh), carrying hs_company_id so a
+    later confirmation can write back to the right HubSpot record."""
+    import csv
+    if not ENRICHED_KEEPERS.exists():
+        return []
+    out = []
+    with open(ENRICHED_KEEPERS, encoding="utf-8-sig", errors="replace") as fh:
+        for row in csv.DictReader(fh):
+            r = {(k or "").strip().lower(): (v or "").strip() for k, v in row.items()}
+            site = r.get("domain") or r.get("website") or ""
+            from pipeline.normalize import domain_from_url
+            dom = domain_from_url(site)
+            if not dom:
+                continue   # no website → can't qualify a site; skip (it's a no-site lead to confirm)
+            out.append({
+                "name": r.get("company") or r.get("name") or "",
+                "domain": dom, "website_raw": site if site.startswith("http") else "https://" + dom,
+                "website_status": "unknown",
+                "practice_type": r.get("practice_type", ""),
+                "location": (r.get("city", "") + " " + r.get("state", "")).strip(),
+                "contact_name": r.get("contact_name", ""), "role": r.get("role", ""),
+                "email": r.get("email", ""), "source": "HubSpot+enriched",
+                "hs_company_id": r.get("hs_company_id", ""),
+                "domain_provisional": False,
+            })
+    return out
 
 
 def _load_hubspot_candidates():
@@ -228,7 +262,7 @@ def main():
 
     # 1) ingest — inbox.csv + CRM xlsx + any HubSpot-resolved candidates
     cands, prior = load_candidates(INBOX, CRM)
-    hs_cands = _load_hubspot_candidates()
+    hs_cands = _load_hubspot_candidates() + _load_enriched_keepers()
     cands += hs_cands
     if args.limit:
         cands = cands[:args.limit]
