@@ -18,23 +18,43 @@
         <span class="count sent"><b id="c-sent">0</b> sent</span>
         <span class="count"><b id="c-skip">0</b> skipped</span>
       </div>
-      <input id="search" type="search" placeholder="Filter name / vertical / city…" />
       <a class="linkbtn" href="daily-list.csv" download>Download CSV</a>
       <button class="linkbtn" id="export">Export sent/skipped</button>
     </div>
   </header>
 
+  <div class="filterbar">
+    <div class="tabs">
+      <button class="tab active" data-view="queue">Today's queue <span id="n-queue">0</span></button>
+      <button class="tab" data-view="research">Research · no site <span id="n-research">0</span></button>
+    </div>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Filter name…" />
+      <select id="f-vertical"><option value="">All verticals</option></select>
+      <select id="f-city"><option value="">All cities</option></select>
+      <select id="f-email">
+        <option value="">Any email</option>
+        <option value="has">Has email</option>
+        <option value="needs">Needs email</option>
+      </select>
+      <button class="linkbtn ghost" id="f-clear">Clear</button>
+    </div>
+  </div>
+
   <main>
-    <p class="lede">
+    <p class="lede" id="lede-queue">
       Each practice qualified on a real, checked weakness in its own website — with
-      one grounded observation drafted for you. <b>Confirm it's true on their site,
-      rewrite it in your voice, then send it yourself.</b> Nothing here is sent
-      automatically.
+      one grounded observation drafted for you. <b>Confirm it's true, rewrite it in
+      your voice, then send it yourself.</b> Nothing here is sent automatically.
+    </p>
+    <p class="lede" id="lede-research" hidden>
+      Practices the enrichment couldn't find a website for. <b>Open their LinkedIn,
+      confirm whether they have a site</b>, then write your own observation. No site
+      at all is itself a strong opener.
     </p>
     <div id="queue"></div>
     <div id="empty" class="empty" hidden>
-      <p>No practices in today's queue.</p>
-      <p class="muted">Add finds to <code>inbox.csv</code> and run <code>python3 run.py</code> to populate it.</p>
+      <p id="empty-msg">No practices match these filters.</p>
     </div>
   </main>
 

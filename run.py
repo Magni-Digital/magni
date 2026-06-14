@@ -165,12 +165,52 @@ def _load_enriched_keepers():
                 "website_status": "unknown",
                 "practice_type": r.get("practice_type", ""),
                 "location": (r.get("city", "") + " " + r.get("state", "")).strip(),
-                "contact_name": r.get("contact_name", ""), "role": r.get("role", ""),
+                "city": r.get("city", ""), "state": r.get("state", ""),
+                "contact_name": r.get("contact_name", ""), "role": r.get("title") or r.get("role", ""),
                 "email": r.get("email", ""), "source": r.get("source") or "enriched",
                 "hs_company_id": r.get("hs_company_id", ""),
                 "domain_provisional": False,
+                # enrichment extras carried straight to the card
+                "person_linkedin": r.get("person_linkedin", ""),
+                "company_linkedin": r.get("company_linkedin", ""),
+                "employee_count": r.get("employee_count", ""),
+                "company_size": r.get("size", ""),
+                "industry": r.get("industry", ""),
+                "description": r.get("description", ""),
             })
     return out
+
+
+def _write_research():
+    """Browsable 'Research' list: enriched leads with NO domain. Can't be
+    site-qualified, so they're never auto-claimed — just surfaced with LinkedIn +
+    firmographics for manual lookup. Writes public/research.json."""
+    import csv
+    path = STATE / "research_leads.csv"
+    if not path.exists():
+        return 0
+    leads = []
+    with open(path, encoding="utf-8-sig", errors="replace") as fh:
+        for row in csv.DictReader(fh):
+            r = {(k or "").strip().lower(): (v or "").strip() for k, v in row.items()}
+            name = r.get("company") or r.get("name") or ""
+            if not name:
+                continue
+            leads.append({
+                "name": name, "practice_type": r.get("practice_type", "") or "practice",
+                "city": r.get("city", ""), "state": r.get("state", ""),
+                "contact": {"name": r.get("contact_name", ""), "role": r.get("title", ""), "email": ""},
+                "person_linkedin": r.get("person_linkedin", ""),
+                "company_linkedin": r.get("company_linkedin", ""),
+                "employee_count": r.get("employee_count", ""), "company_size": r.get("size", ""),
+                "industry": r.get("industry", ""), "description": r.get("description", ""),
+                "source": r.get("source", "SalesNav/Clay"),
+                "dedupe_key": "research:" + name.lower().strip(),
+            })
+    (PUBLIC).mkdir(parents=True, exist_ok=True)
+    (PUBLIC / "research.json").write_text(json.dumps(
+        {"count": len(leads), "leads": leads}, indent=2, ensure_ascii=False))
+    return len(leads)
 
 
 def _load_hubspot_candidates():
@@ -233,6 +273,12 @@ def to_entry(rec, queue_date):
         "source": rec.get("source", ""),
         "domain_provisional": bool(rec.get("domain_provisional")),
         "hs_company_id": rec.get("hs_company_id", ""),
+        "person_linkedin": rec.get("person_linkedin", ""),
+        "company_linkedin": rec.get("company_linkedin", ""),
+        "employee_count": rec.get("employee_count", ""),
+        "company_size": rec.get("company_size", ""),
+        "industry": rec.get("industry", ""),
+        "description": rec.get("description", ""),
         "dedupe_key": rec.get("dedupe_key") or D.key_for(rec),
         "queue_date": queue_date,
     }
@@ -394,7 +440,9 @@ def main():
     # 6) persist: cache, waterfall gap, mark surfaced, write outputs
     QUALIFY_CACHE.write_text(json.dumps(cache, indent=2, ensure_ascii=False))
     n_gap = _write_waterfall(cands)
-    print(f"▸ qualify cache: {len(cache)} domains | needs-waterfall (qualified, no email): {n_gap} → {WATERFALL_PATH.name}")
+    n_research = _write_research()
+    print(f"▸ qualify cache: {len(cache)} domains | needs-waterfall: {n_gap} → {WATERFALL_PATH.name} "
+          f"| research (no-site) leads: {n_research} → public/research.json")
     D.mark_surfaced(seen, queued, now_iso)
     D.save_seen(SEEN_PATH, seen)
     PUBLIC.mkdir(parents=True, exist_ok=True)
