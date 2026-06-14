@@ -31,7 +31,7 @@ import requests
 from pipeline import dedupe as D
 from pipeline import signals as S
 from pipeline import verify_email as V
-from pipeline.fetch import fetch_site
+from pipeline.fetch import fetch_site, harvest_email
 from pipeline.ingest import load_candidates
 from pipeline.observe import observe_all
 from pipeline.score import compute, rank_key
@@ -87,6 +87,14 @@ def qualify_one(cand, *, current_year, do_broken):
         return _attach(cand, [], _meta(ctx), "blocked", lang)
     if ctx.get("near_empty"):
         return _attach(cand, [], _meta(ctx), "needs_render", lang)
+
+    # free email harvest from the site (only if we don't already have one) — fills
+    # the gap so Clay's paid waterfall is needed only where the site shows nothing
+    if not (cand.get("email") or "").strip():
+        em = harvest_email(ctx, fetch_contact=do_broken)  # reuse the broken-links flag to gate the extra /contact GET
+        if em:
+            cand["email"] = em
+            cand["email_source"] = "site"
 
     findings = [
         S.detect_no_ssl(ctx, cand),

@@ -27,6 +27,16 @@ NEAR_EMPTY_TEXT = 220   # visible-text chars below which we suspect a JS SPA
 _TAG_RE = re.compile(r"<(script|style|noscript)[^>]*>.*?</\1>", re.S | re.I)
 _ANYTAG_RE = re.compile(r"<[^>]+>")
 _LANG_RE = re.compile(r"<html[^>]*\blang=[\"']?([a-zA-Z-]{2,5})", re.I)
+_EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
+# generic local-parts are fine (a way in) but a person-looking one is better
+_GENERIC_LOCAL = ("info", "contact", "hello", "office", "admin", "frontdesk",
+                  "front.desk", "reception", "appointments", "scheduling", "team",
+                  "support", "help", "inquiries", "hola", "citas", "recepcion")
+# never treat these as contact emails (asset hashes, vendors, placeholders)
+_EMAIL_JUNK_DOMAIN = ("example.com", "sentry.io", "wixpress.com", "wix.com",
+                      "godaddy.com", "squarespace.com", "w3.org", "schema.org",
+                      "sentry-next.wixpress.com", "fontawesome.com", "googleapis.com")
+_EMAIL_JUNK_EXT = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".css", ".js")
 
 
 def visible_text(html):
@@ -44,6 +54,64 @@ def detect_lang(html):
     Used only to pick the observation's language; never a weakness signal."""
     m = _LANG_RE.search(html or "")
     return m.group(1).split("-")[0].lower() if m else ""
+
+
+def extract_emails(html, site_domain=""):
+    """Pull contact emails out of page HTML (mailto: + visible text). Returns a
+    ranked list, best first: same-domain person address > same-domain generic >
+    other person address > other generic. Junk (asset hashes, vendor domains) is
+    dropped. Never invents — only what's literally on the page."""
+    if not html:
+        return []
+    found = set()
+    for m in re.finditer(r'mailto:([^"\'?>\s]+)', html, re.I):
+        found.add(m.group(1).strip().lower())
+    for m in _EMAIL_RE.finditer(html):
+        found.add(m.group(0).strip().lower())
+
+    sd = (site_domain or "").lower().lstrip("www.")
+    ranked = []
+    for e in found:
+        try:
+            local, dom = e.split("@", 1)
+        except ValueError:
+            continue
+        if dom in _EMAIL_JUNK_DOMAIN or any(e.endswith(x) for x in _EMAIL_JUNK_EXT):
+            continue
+        if len(local) < 2 or "." not in dom:
+            continue
+        same = bool(sd) and (dom == sd or dom.endswith("." + sd) or sd.endswith("." + dom))
+        generic = any(local.startswith(g) for g in _GENERIC_LOCAL)
+        # rank: lower = better
+        rank = (0 if same else 2) + (1 if generic else 0)
+        ranked.append((rank, e))
+    ranked.sort()
+    return [e for _, e in ranked]
+
+
+def harvest_email(ctx, *, fetch_contact=True, timeout=8):
+    """Best contact email for a fetched site: homepage first, then a /contact
+    page if the homepage had none. '' if the site publishes no email (common —
+    many practices only have a form; those become Clay-waterfall candidates)."""
+    domain = ctx.get("final_domain") or ctx.get("domain") or ""
+    emails = extract_emails(ctx.get("html", ""), domain)
+    if emails:
+        return emails[0]
+    if not fetch_contact or not domain:
+        return ""
+    for path in ("/contact", "/contact-us", "/contacto"):
+        try:
+            r = _get("https://" + domain + path, timeout, verify=True)
+            if r.status_code < 400:
+                got = extract_emails(_read(r), domain)
+                r.close()
+                if got:
+                    return got[0]
+            else:
+                r.close()
+        except requests.RequestException:
+            continue
+    return ""
 
 
 def _get(url, timeout, verify):
