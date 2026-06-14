@@ -1,19 +1,22 @@
 name: Daily review queue
 
-# Refreshes the review queue every morning and commits the result. Cloudflare
-# Pages (connected to this repo) then auto-deploys the updated public/ folder.
+# MANUAL ONLY (no schedule) — on purpose. The real pipeline runs LOCALLY, where
+# the enriched inputs (state/keepers_enriched.csv, the qualify cache) and tokens
+# live; those are gitignored, so a CI run would only see the sample rows and
+# would CLOBBER the good data.json with a samples-only version. So: refresh by
+# running `python3 run.py` locally and pushing.
 #
-# Runs ~2 AM Central. GitHub's cron is fixed UTC, so the wall-clock time drifts
-# ±1h with US daylight saving — fine for an overnight job. You can also run it
-# any time by hand: Actions tab → "Daily review queue" → "Run workflow".
+# To make this safe for CI later, commit the enriched inputs + cache to the repo
+# (private) and re-enable the schedule below. The guard step aborts if those
+# inputs aren't present, so a stray manual run can't overwrite real data.
 
 on:
-  schedule:
-    - cron: "0 7 * * *"   # 07:00 UTC ≈ 2 AM Central
-  workflow_dispatch: {}     # manual "Run workflow" button
+  workflow_dispatch: {}     # manual "Run workflow" button only
+  # schedule:
+  #   - cron: "0 7 * * *"   # re-enable once enriched inputs live in the repo
 
 permissions:
-  contents: write           # lets the job commit the refreshed list back
+  contents: write
 
 concurrency:
   group: daily-queue
@@ -24,6 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Guard — refuse to run without the enriched inputs (would clobber real data)
+        run: |
+          if [ ! -f state/keepers_enriched.csv ]; then
+            echo "::error::state/keepers_enriched.csv not in repo — CI can't reproduce the real pipeline. Refresh locally instead."
+            exit 1
+          fi
 
       - uses: actions/setup-python@v5
         with:
