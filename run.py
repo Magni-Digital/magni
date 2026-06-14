@@ -91,7 +91,7 @@ def qualify_one(cand, *, current_year, do_broken):
     # free email harvest from the site (only if we don't already have one) — fills
     # the gap so Clay's paid waterfall is needed only where the site shows nothing
     if not (cand.get("email") or "").strip():
-        em = harvest_email(ctx, fetch_contact=do_broken)  # reuse the broken-links flag to gate the extra /contact GET
+        em = harvest_email(ctx, fetch_contact=True)  # homepage is free; /contact GET only if homepage has none
         if em:
             cand["email"] = em
             cand["email_source"] = "site"
@@ -163,7 +163,7 @@ def _load_enriched_keepers():
                 "practice_type": r.get("practice_type", ""),
                 "location": (r.get("city", "") + " " + r.get("state", "")).strip(),
                 "contact_name": r.get("contact_name", ""), "role": r.get("role", ""),
-                "email": r.get("email", ""), "source": "HubSpot+enriched",
+                "email": r.get("email", ""), "source": r.get("source") or "enriched",
                 "hs_company_id": r.get("hs_company_id", ""),
                 "domain_provisional": False,
             })

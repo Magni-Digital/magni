@@ -1,6 +1,766 @@
 {
-  "generated": "2026-06-13T15:10:31.509700+00:00",
-  "queue_date": "2026-06-13",
-  "count": 0,
-  "practices": []
+  "generated": "2026-06-14T20:27:01.620140+00:00",
+  "queue_date": "2026-06-14",
+  "count": 19,
+  "practices": [
+    {
+      "name": "Moriarity Agency",
+      "practice_type": "insurance",
+      "domain": "moriarityagency.net",
+      "website_raw": "https://moriarityagency.net",
+      "location": "Centennial Colorado",
+      "contact": {
+        "name": "Matthew Moriarity",
+        "role": "",
+        "email": ""
+      },
+      "weakness_score": 100,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “© 2019 Moriarity Agency” — 7 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on GoDaddy Website Builder",
+          "confidence": "low",
+          "evidence_str": "The site is built on GoDaddy Website Builder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Moriarity Agency's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "moriarityagency.net",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "The Kingly Group",
+      "practice_type": "real_estate",
+      "domain": "thekinglygroup.com",
+      "website_raw": "https://thekinglygroup.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Ronny Philip",
+        "role": "",
+        "email": ""
+      },
+      "weakness_score": 67,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        }
+      ],
+      "draft_observation": "The Kingly Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "thekinglygroup.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Perpetual CPA",
+      "practice_type": "financial",
+      "domain": "perpetualcpa.com",
+      "website_raw": "https://perpetualcpa.com",
+      "location": "Portland Oregon",
+      "contact": {
+        "name": "Paul Tilyaev, CPA, MSF",
+        "role": "",
+        "email": "info@perpetualcpa.com"
+      },
+      "weakness_score": 44,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "Perpetual CPA's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@perpetualcpa.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "perpetualcpa.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "LBM Financial Group",
+      "practice_type": "law",
+      "domain": "lbmfinancialgroup.com",
+      "website_raw": "https://lbmfinancialgroup.com",
+      "location": "Denver Colorado",
+      "contact": {
+        "name": "Lacey Allen",
+        "role": "",
+        "email": "info@lbmfinancialgroup.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        }
+      ],
+      "draft_observation": "LBM Financial Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@lbmfinancialgroup.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "lbmfinancialgroup.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Stressie",
+      "practice_type": "mental_health",
+      "domain": "stressieapp.com",
+      "website_raw": "https://stressieapp.com",
+      "location": "Austin texas",
+      "contact": {
+        "name": "Lupita Almuhana",
+        "role": "",
+        "email": ""
+      },
+      "weakness_score": 44,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on Wix",
+          "confidence": "low",
+          "evidence_str": "The site is built on Wix."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "There’s no way to book or request an appointment from Stressie's site.",
+      "observation_cited_signal": "no_booking",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "stressieapp.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Vital Care of Portland",
+      "practice_type": "mental_health",
+      "domain": "vitalcare.com",
+      "website_raw": "https://vitalcare.com",
+      "location": "Happy Valley Oregon",
+      "contact": {
+        "name": "Katie Vahle",
+        "role": "",
+        "email": "info@vitalcare.com"
+      },
+      "weakness_score": 44,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "There’s no way to book or request an appointment from Vital Care of Portland's site.",
+      "observation_cited_signal": "no_booking",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@vitalcare.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "vitalcare.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Pausality.health",
+      "practice_type": "integrative_health",
+      "domain": "pausality.health",
+      "website_raw": "https://pausality.health",
+      "location": "Seattle Wa",
+      "contact": {
+        "name": "Randy Graybeal",
+        "role": "",
+        "email": ""
+      },
+      "weakness_score": 44,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on GoDaddy Website Builder",
+          "confidence": "low",
+          "evidence_str": "The site is built on GoDaddy Website Builder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "There’s no way to book or request an appointment from Pausality.health's site.",
+      "observation_cited_signal": "no_booking",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "pausality.health",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "CloverLeaf Commercial Lending",
+      "practice_type": "financial",
+      "domain": "cloverleaflending.com",
+      "website_raw": "https://cloverleaflending.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Steven Spillane",
+        "role": "",
+        "email": "info@cloverleaflending.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “© 2023 - CloverLeaf Capital Partners LLC” — 3 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "The footer on CloverLeaf Commercial Lending's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@cloverleaflending.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "cloverleaflending.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Equitas Strategic Partners",
+      "practice_type": "financial",
+      "domain": "equitassp.com",
+      "website_raw": "https://equitassp.com",
+      "location": "Franklin Tennessee",
+      "contact": {
+        "name": "Craig Cook",
+        "role": "",
+        "email": "info@equitassp.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “©” — 2 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "The footer on Equitas Strategic Partners's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@equitassp.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "equitassp.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Barta Business Group",
+      "practice_type": "financial",
+      "domain": "bartabusinessgroup.com",
+      "website_raw": "https://bartabusinessgroup.com",
+      "location": "Denver CO",
+      "contact": {
+        "name": "Dean Barta",
+        "role": "",
+        "email": "solutions@bartabusinessgroup.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “Copyright (c) 2015 Daniel Eden */@-webkit-keyf” — 11 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "The footer on Barta Business Group's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "solutions@bartabusinessgroup.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "bartabusinessgroup.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Rhima Law PLLC",
+      "practice_type": "law",
+      "domain": "rhimalaw.com",
+      "website_raw": "https://rhimalaw.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Stephanie R.",
+        "role": "",
+        "email": "contact@rhimalaw.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “Copyright © 2023-2024 | Rhima Law PLLC | All r” — 2 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "The footer on Rhima Law PLLC's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "contact@rhimalaw.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "rhimalaw.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Mountain States Commercial Credit Management",
+      "practice_type": "addiction_recovery",
+      "domain": "msccm.com",
+      "website_raw": "https://msccm.com",
+      "location": "Englewood Colorado",
+      "contact": {
+        "name": "Tom Claybaugh",
+        "role": "",
+        "email": "info@msccm.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “©2022 Mountain States Commercial Credit Manage” — 4 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "The footer on Mountain States Commercial Credit Management's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@msccm.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "msccm.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "First Responder Psychology",
+      "practice_type": "mental_health",
+      "domain": "firstresponderpsychology.com",
+      "website_raw": "https://firstresponderpsychology.com",
+      "location": "Hillsboro Oregon",
+      "contact": {
+        "name": "Stephanie Conn, PhD, ABPP, Police/Public Safety Psychology",
+        "role": "",
+        "email": "chelsea@firstresponderpsychology.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “Copyright © 2017 First Responder Psychology - ” — 9 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on GoDaddy Website Builder",
+          "confidence": "low",
+          "evidence_str": "The site is built on GoDaddy Website Builder."
+        }
+      ],
+      "draft_observation": "The footer on First Responder Psychology's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "chelsea@firstresponderpsychology.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "firstresponderpsychology.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "The R.O.W. Group",
+      "practice_type": "financial",
+      "domain": "therowgroup.com",
+      "website_raw": "https://therowgroup.com",
+      "location": "Nashville Tennessee",
+      "contact": {
+        "name": "Mary Jo Innis, CPFA",
+        "role": "",
+        "email": "admin@therowgroup.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “Copyright (c) 2015 Daniel Eden */@-webkit-keyf” — 11 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "The footer on The R.O.W. Group's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "admin@therowgroup.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "therowgroup.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Blacktop Partners",
+      "practice_type": "financial",
+      "domain": "blacktop-partners.com",
+      "website_raw": "https://blacktop-partners.com",
+      "location": "Dallas TX",
+      "contact": {
+        "name": "Jack Silberman",
+        "role": "",
+        "email": ""
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~29 words of content and 5 links — barely more than a placeholder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Blacktop Partners's homepage is pretty sparse — there’s very little there for someone deciding whether to reach out.",
+      "observation_cited_signal": "thin_site",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "blacktop-partners.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Dynamis Online",
+      "practice_type": "mental_health",
+      "domain": "dynamisonline.com",
+      "website_raw": "https://dynamisonline.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Andi Cook",
+        "role": "",
+        "email": "help@dynamisonline.com"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "There’s no way to book or request an appointment from Dynamis Online's site.",
+      "observation_cited_signal": "no_booking",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "help@dynamisonline.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "dynamisonline.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Crossroads Capital, LLC",
+      "practice_type": "practice",
+      "domain": "crossroadscap.io",
+      "website_raw": "https://crossroadscap.io",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Cole Lysaught",
+        "role": "",
+        "email": "contact@crossroadscap.io"
+      },
+      "weakness_score": 33,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “Copyright ©” — 5 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "The footer on Crossroads Capital, LLC's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "contact@crossroadscap.io",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "crossroadscap.io",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "WeedWorks Consulting",
+      "practice_type": "medical_clinic",
+      "domain": "weedworksinc.com",
+      "website_raw": "https://weedworksinc.com",
+      "location": "Scottsdale Arizona",
+      "contact": {
+        "name": "Randi Sobel",
+        "role": "",
+        "email": "randi@weedworksinc.com"
+      },
+      "weakness_score": 22,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        }
+      ],
+      "draft_observation": "There’s no way to book or request an appointment from WeedWorks Consulting's site.",
+      "observation_cited_signal": "no_booking",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "randi@weedworksinc.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "weedworksinc.com",
+      "queue_date": "2026-06-14"
+    },
+    {
+      "name": "Unique Wire, Inc",
+      "practice_type": "law",
+      "domain": "unique-wire.com",
+      "website_raw": "https://unique-wire.com",
+      "location": "Mcminnville OR",
+      "contact": {
+        "name": "Brian Feucht",
+        "role": "",
+        "email": "info@unique-wire.com"
+      },
+      "weakness_score": 22,
+      "site_high_count": 0,
+      "evidence": [
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “© 2023 Unique Wire, Inc. All Rights Reserved.” — 3 years out of date, a sign the site hasn’t been touched since then."
+        }
+      ],
+      "draft_observation": "The footer on Unique Wire, Inc's site still shows an old copyright year, which usually means it hasn’t been touched in a few years.",
+      "observation_cited_signal": "stale_copyright",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@unique-wire.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "dedupe_key": "unique-wire.com",
+      "queue_date": "2026-06-14"
+    }
+  ]
 }
