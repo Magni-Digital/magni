@@ -43,6 +43,9 @@ STATE = ROOT / "state"
 SEEN_PATH = STATE / "seen.json"
 EMAIL_CACHE = STATE / "email_cache.json"
 DISPOS_PATH = STATE / "dispositions.json"   # exported from the review page
+QUALIFY_CACHE = STATE / "qualify_cache.json"   # domain → qualify result (skip re-fetch)
+WATERFALL_PATH = STATE / "needs_waterfall.csv"  # qualified leads with no harvested email
+CACHE_STALE_DAYS = 30
 PUBLIC = ROOT / "public"
 DATA_PATH = PUBLIC / "data.json"
 CSV_PATH = PUBLIC / "daily-list.csv"
@@ -254,12 +257,70 @@ def write_csv(entries):
             ])
 
 
+_CACHEABLE = ("evidence", "weakness_score", "qualify_status", "site_high_count",
+              "site_med_count", "site_meta", "lang")
+
+
+def _load_qualify_cache():
+    if QUALIFY_CACHE.exists():
+        try:
+            return json.loads(QUALIFY_CACHE.read_text())
+        except ValueError:
+            return {}
+    return {}
+
+
+def _cache_fresh(entry, now):
+    try:
+        ts = datetime.fromisoformat(entry.get("_ts", ""))
+    except (ValueError, TypeError):
+        return False
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=timezone.utc)
+    return (now - ts).total_seconds() < CACHE_STALE_DAYS * 86400
+
+
+def _apply_cache(cand, entry):
+    for k in _CACHEABLE:
+        cand[k] = entry.get(k)
+    cand["qualified"] = entry.get("qualify_status") == "qualified"
+    he = entry.get("harvested_email")
+    if he and not (cand.get("email") or "").strip():
+        cand["email"] = he
+        cand["email_source"] = "site"
+
+
+def _store_cache(cache, cand, now_iso):
+    dom = cand.get("domain")
+    if not dom:
+        return
+    e = {k: cand.get(k) for k in _CACHEABLE}
+    if cand.get("email_source") == "site":
+        e["harvested_email"] = cand.get("email", "")
+    e["_ts"] = now_iso
+    cache[dom] = e
+
+
+def _write_waterfall(cands):
+    """The Clay-waterfall gap: qualified leads where no email was on the site."""
+    import csv
+    gap = [c for c in cands if c.get("qualified") and c.get("email_verified") == "no_email"]
+    with open(WATERFALL_PATH, "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["company", "domain", "contact_name", "title", "city", "state"])
+        for c in gap:
+            w.writerow([c.get("name", ""), c.get("domain", ""), c.get("contact_name", ""),
+                        c.get("role", ""), c.get("city", "") or c.get("location", ""), c.get("state", "")])
+    return len(gap)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--target", type=int, default=30)
     ap.add_argument("--min", type=int, default=20)
     ap.add_argument("--limit", type=int)
     ap.add_argument("--no-broken-links", action="store_true")
+    ap.add_argument("--refresh", action="store_true", help="ignore the qualify cache and re-fetch")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -278,14 +339,21 @@ def main():
           f"({len(hs_cands)} from HubSpot, "
           f"{len(prior)} already-contacted CRM rows folded into seen-set)")
 
-    # 2) qualify
+    # 2) qualify (cache by domain so re-runs don't re-crawl the same sites)
+    cache = _load_qualify_cache()
+    n_cached = 0
     for i, c in enumerate(cands, 1):
-        qualify_one(c, current_year=current_year, do_broken=not args.no_broken_links)
+        dom = c.get("domain")
+        if dom and not args.refresh and dom in cache and _cache_fresh(cache[dom], now):
+            _apply_cache(c, cache[dom]); n_cached += 1
+        else:
+            qualify_one(c, current_year=current_year, do_broken=not args.no_broken_links)
+            _store_cache(cache, c, now_iso)
         flag = "✓" if c["qualified"] else " "
-        print(f"  [{i:3d}/{len(cands)}] {flag} {c['qualify_status']:13s} "
+        print(f"  [{i:4d}/{len(cands)}] {flag} {c['qualify_status']:13s} "
               f"score={c['weakness_score']:3d} hi={c['site_high_count']} {c['name'][:34]}")
     qst = Counter(c["qualify_status"] for c in cands)
-    print(f"▸ qualify status: {dict(qst)}")
+    print(f"▸ qualify status: {dict(qst)}  ({n_cached} from cache, {len(cands)-n_cached} fetched)")
 
     # 3) observe (one grounded sentence per qualified site)
     n_claude, n_fb = observe_all(cands)
@@ -323,7 +391,10 @@ def main():
                   f"score={e['weakness_score']}  “{e['draft_observation'][:60]}”")
         return
 
-    # 6) persist: mark surfaced, write outputs
+    # 6) persist: cache, waterfall gap, mark surfaced, write outputs
+    QUALIFY_CACHE.write_text(json.dumps(cache, indent=2, ensure_ascii=False))
+    n_gap = _write_waterfall(cands)
+    print(f"▸ qualify cache: {len(cache)} domains | needs-waterfall (qualified, no email): {n_gap} → {WATERFALL_PATH.name}")
     D.mark_surfaced(seen, queued, now_iso)
     D.save_seen(SEEN_PATH, seen)
     PUBLIC.mkdir(parents=True, exist_ok=True)

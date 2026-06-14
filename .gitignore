@@ -14,3 +14,5 @@ __pycache__/
 *.pyc
 .DS_Store
 Lists/
+state/qualify_cache.json
+state/needs_waterfall.csv
