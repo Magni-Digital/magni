@@ -25,21 +25,36 @@ automatically.**
 
 ---
 
-## Daily workflow (Almendra)
+## Daily use (Almendra) — just open the page
 
-1. Drop the practices you found on LinkedIn into **`inbox.csv`** — one row each.
-   Only `company` and `website` are required; add `contact_name`, `role`,
-   `email`, `location`, `vertical` when you have them.
-2. Run the tool (see below) — or open the page if someone runs it for you.
-3. Open the **review page**. For each card: check the observation is true on
-   their site, tweak it, hit **Copy**, and send it from your own inbox.
-4. Click **Mark sent** / **Skip** as you go.
-5. Click **Export sent/skipped** at the end of the day → it downloads
-   `dispositions.json`. Drop that file in **`state/`** before the next run so
-   the practices you handled never come back.
+Go to the review URL (**atlas-magni.pages.dev**). A fresh set of practices is
+waiting each morning. You don't run anything — the list refreshes itself.
 
-`Download CSV` gives you the day's list in your CRM's exact columns, ready to
-paste into the Magni Digital CRM pipeline.
+**Two tabs at the top:**
+- **Today's queue** — practices that qualified on a real, checked website weakness,
+  each with one drafted observation. This is your daily work.
+- **Research · no site** — practices the enrichment couldn't find a website for.
+  Open their LinkedIn, check for a site, and write your own line (no site at all
+  is a strong opener).
+
+**Filters** (the bar under the tabs): filter by name, **vertical**, **city**, or
+**email status** (has email / needs email). Use these to batch similar outreach.
+
+**Working a card:**
+1. Read the **Checked findings** — the true things wrong with their site.
+2. Read the **draft observation**. **Open their site (and LinkedIn) and confirm
+   it's actually true**, then rewrite it in your own voice in the box.
+3. **Copy** the observation (and **Copy email** if shown), paste into your own
+   email, and send it. *The tool never sends anything.*
+4. Click **Mark sent** (or **Skip**). On Mark sent, the practice + your observation
+   are logged to **HubSpot** automatically, and it won't appear again.
+
+Badges to know: **✓ email verified** (good to use), **no email** (you'll need to
+find it / it's on the Research tab), **⚠ confirm site** (the website was
+auto-matched — double-check it's really theirs before sending).
+
+`Download CSV` exports the day's list in the CRM's exact columns if you ever want
+it offline.
 
 ---
 
