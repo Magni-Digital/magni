@@ -37,10 +37,12 @@ FIELDS = {
     "person_linkedin": ("personLinkedinUrl",), "company_linkedin": ("companyLinkedinUrl",),
     "website": ("Website",), "employee_count": ("Employee Count",), "size": ("Size",),
     "industry": ("Industry",), "description": ("Description",), "founded": ("Founded",),
+    "annual_revenue": ("Annual Revenue",), "follower_count": ("Follower Count",),
 }
 OUT_COLS = ["hs_company_id", "company", "domain", "website", "email", "contact_name",
             "title", "city", "state", "practice_type", "source", "person_linkedin",
-            "company_linkedin", "employee_count", "size", "industry", "description"]
+            "company_linkedin", "employee_count", "size", "industry", "description",
+            "founded", "annual_revenue", "follower_count"]
 
 
 def g(row, field):
@@ -79,8 +81,28 @@ def rec(row, domain):
         "source": "SalesNav/Clay", "person_linkedin": g(row, "person_linkedin"),
         "company_linkedin": g(row, "company_linkedin"), "employee_count": g(row, "employee_count"),
         "size": g(row, "size"), "industry": g(row, "industry"),
-        "description": g(row, "description")[:280],
+        "description": g(row, "description")[:280], "founded": g(row, "founded"),
+        "annual_revenue": g(row, "annual_revenue"), "follower_count": g(row, "follower_count"),
     }
+
+
+def _backfill_emails(qualifiable):
+    """Fold Work Email from a waterfall-enriched export (Lists/*waterfall-enriched*.csv)
+    into rows that had none, matched by domain."""
+    wf = glob.glob("Lists/*waterfall-enriched*.csv")
+    if not wf:
+        return 0
+    m = {}
+    for r in csv.DictReader(open(wf[0], encoding="utf-8-sig", errors="replace")):
+        dom = domain_from_url(r.get("domain") or r.get("Domain") or "")
+        em = (r.get("Work Email") or r.get("email") or r.get("Email") or "").strip()
+        if dom and em:
+            m[dom] = em
+    n = 0
+    for rec_ in qualifiable:
+        if not rec_["email"] and rec_["domain"] in m:
+            rec_["email"] = m[rec_["domain"]]; n += 1
+    return n
 
 
 def main():
@@ -111,6 +133,8 @@ def main():
             seen_name.add(key)
             research.append(rec(r, ""))
 
+    n_bf = _backfill_emails(qualifiable)
+
     (ROOT / "state").mkdir(exist_ok=True)
     with open(ROOT / "state" / "keepers_enriched.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=OUT_COLS); w.writeheader(); w.writerows(qualifiable)
@@ -119,6 +143,7 @@ def main():
         w = csv.DictWriter(fh, fieldnames=rcols, extrasaction="ignore"); w.writeheader(); w.writerows(research)
 
     print(f"qualifiable (has domain): {len(qualifiable)}  → state/keepers_enriched.csv")
+    print(f"waterfall emails backfilled: {n_bf}")
     print(f"research (no domain, LinkedIn): {len(research)}  → state/research_leads.csv")
     print(f"dropped: {dict(drop)}")
 

@@ -103,9 +103,9 @@ code { background: #eef2f5; padding: 1px 5px; border-radius: 5px; font-size: 12.
 .card-body { padding: 14px 18px 18px; }
 .evid-label, .obs-label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0 0 8px; font-weight: 700; }
 .evidence { list-style: none; margin: 0 0 18px; padding: 12px 14px; background: #f8fafb; border: 1px solid var(--line); border-radius: 10px; }
-.evidence li { display: flex; gap: 10px; padding: 5px 0; font-size: 13.5px; }
+.evidence li { display: flex; gap: 10px; padding: 5px 4px 5px 6px; font-size: 13.5px; }
 .evidence li + li { border-top: 1px dashed var(--line); }
-.dot { flex: none; width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; }
+.dot { flex: none; width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; margin-left: 3px; }
 .dot.high { background: var(--hi); }
 .dot.med { background: var(--med); }
 .dot.low { background: #c3cdd4; }
@@ -120,6 +120,15 @@ textarea.obs {
 }
 textarea.obs:focus { outline: none; border-color: var(--accent); }
 .obs-src { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+/* ── more-info expansion ── */
+.moreinfo { font: inherit; font-size: 12px; font-weight: 600; color: var(--accent-deep); background: none; border: none; padding: 10px 0 2px; cursor: pointer; }
+.moreinfo:hover { text-decoration: underline; }
+.details { margin-top: 6px; padding: 12px 14px; background: #f8fafb; border: 1px solid var(--line); border-radius: 10px; }
+.detgrid { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0; font-size: 13px; }
+.detgrid dt { color: var(--muted); font-weight: 600; }
+.detgrid dd { margin: 0; color: var(--ink); word-break: break-word; }
+.details .desc { margin: 0 0 10px; }
 
 /* ── actions ── */
 .actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; }

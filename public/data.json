@@ -12,7 +12,7 @@
       "contact": {
         "name": "Don Hill",
         "role": "Owner",
-        "email": ""
+        "email": "dhill@rowletthill.com"
       },
       "weakness_score": 56,
       "site_high_count": 1,
@@ -40,8 +40,8 @@
       "observation_cited_signal": "no_viewport",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "dhill@rowletthill.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -52,7 +52,10 @@
       "industry": "Law Practice",
       "description": "Rowlett Hill Collins LLP is a nationally recognized law firm based in Dallas, TX.  The firm's experienced attorneys represent individuals and companies in legal matters, including both business litigation and complex transactions.\n\nThe firm is AV Rated by Martindale-Hubbell.",
       "dedupe_key": "rowletthill.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2006",
+      "annual_revenue": "500K-1M",
+      "follower_count": "21"
     },
     {
       "name": "Enterprise Risk Strategies",
@@ -63,7 +66,7 @@
       "contact": {
         "name": "Luis Filipe, CPA, CMA",
         "role": "President",
-        "email": ""
+        "email": "lfilipe@erscaptive.com"
       },
       "weakness_score": 56,
       "site_high_count": 1,
@@ -91,8 +94,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "lfilipe@erscaptive.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -103,7 +106,10 @@
       "industry": "Insurance",
       "description": "Enterprise Risk Strategies (ERS) is a full-service consulting services, underwriting services, and captive management firm.\n \n---------------------------------------------------------------------\n\nERS is a team of professionals with more than 100 years of combined insurance, alte",
       "dedupe_key": "eriskstrategies.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2011",
+      "annual_revenue": "1M-5M",
+      "follower_count": "113"
     },
     {
       "name": "Markee Valuations, LLC",
@@ -154,7 +160,9 @@
       "industry": "Financial Services",
       "description": "Empowering Value.\n\nThat's what we're about.  Whether you are buying or selling a business, doing estate planning, pursuing litigation or a divorce, we are committed to empowering you with an experience-driven, detail-focused valuation.\n\nWe understand every circumstance is unique.",
       "dedupe_key": "markeevaluations.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "1M-5M",
+      "follower_count": "48"
     },
     {
       "name": "Lakeside Investment Group",
@@ -205,7 +213,10 @@
       "industry": "Investment Management",
       "description": "Lakeside Investment Group LLC is a private investment firm interested in investing long-term in real estate opportunities and small to medium sized businesses.",
       "dedupe_key": "lakesidegroupllc.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2016",
+      "annual_revenue": "1M-5M",
+      "follower_count": "33"
     },
     {
       "name": "Penguin Payment Advisors",
@@ -216,7 +227,7 @@
       "contact": {
         "name": "Anna Lam",
         "role": "Founder/CEO",
-        "email": ""
+        "email": "anna@penguinpaymentsolutions.com"
       },
       "weakness_score": 44,
       "site_high_count": 1,
@@ -238,8 +249,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "anna@penguinpaymentsolutions.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -250,7 +261,9 @@
       "industry": "Business Consulting and Services",
       "description": "We help small and medium-sized businesses find the right credit card and ACH processing solutions – saving time, money and frustration. We assess your company's needs and match you with the payment processor that best suits your business - often saving you money!",
       "dedupe_key": "penguinpaymentsolutions.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "500K-1M",
+      "follower_count": "21"
     },
     {
       "name": "CapStack",
@@ -261,7 +274,7 @@
       "contact": {
         "name": "Blake Schechter",
         "role": "Managing Partner",
-        "email": ""
+        "email": "blake@capstackco.com"
       },
       "weakness_score": 44,
       "site_high_count": 1,
@@ -283,8 +296,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "blake@capstackco.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -295,7 +308,9 @@
       "industry": "Financial Services",
       "description": "A boutique debt advisory & private lending firm serving real estate investors, builders, and developers. Our structure is simple: a lean firm with loaded capital - allowing us to move quickly, keep fees low, and tailor financing to fit the deal.\n\nWe specialize in Ground-Up constr",
       "dedupe_key": "capstackco.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2025",
+      "follower_count": "39"
     },
     {
       "name": "Speaking About Benefits",
@@ -306,7 +321,7 @@
       "contact": {
         "name": "Norm Mitchell, LUTCF",
         "role": "Owner - Retired",
-        "email": ""
+        "email": "mitchell.n@google.com"
       },
       "weakness_score": 44,
       "site_high_count": 1,
@@ -328,8 +343,8 @@
       "observation_cited_signal": "no_viewport",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "mitchell.n@google.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -340,7 +355,10 @@
       "industry": "Insurance",
       "description": "Norm Mitchell, Speaking About Benefits, does benefit enrollments and group presentations for numerous enrollment companies, brokers and insurance carriers across the US. I have over 50 years experience in the insurance industry and I had my own successful multi-line insurance age",
       "dedupe_key": "sites.google.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2002",
+      "annual_revenue": "1M-5M",
+      "follower_count": "70"
     },
     {
       "name": "Wave Financial Partners",
@@ -385,7 +403,9 @@
       "industry": "Insurance",
       "description": "My unique partnership with Wave has given me instant access to over 14 insurance companies & to offer a \"personal shopping service\" to find the best rates for home owners and auto insurance. Ask for a quote, you'll be amazed how much you can save!",
       "dedupe_key": "wavefinancialpartners.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "5M-10M",
+      "follower_count": "73"
     },
     {
       "name": "Conrad Tax Solutions",
@@ -430,7 +450,10 @@
       "industry": "Financial Services",
       "description": "Taking the stress and surprises out of tax time",
       "dedupe_key": "conradtax.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "1987",
+      "annual_revenue": "10M-25M",
+      "follower_count": "6"
     },
     {
       "name": "IBG Fox & Fin",
@@ -441,7 +464,7 @@
       "contact": {
         "name": "Troy Stapley MBA, CMAP",
         "role": "Managing Director",
-        "email": ""
+        "email": "troy@foxfin.com"
       },
       "weakness_score": 44,
       "site_high_count": 1,
@@ -463,8 +486,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "troy@foxfin.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -475,7 +498,10 @@
       "industry": "Financial Services",
       "description": "IBG/Fox & Fin is a financial advisory company that facilitates the mergers and acquisitions of privately held, middle-market companies – with a sharp focus on businesses in the western U.S. that have annual sales between $5 million and $125 million.\n\nWhile our ultimate objective",
       "dedupe_key": "foxfin.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "1993",
+      "annual_revenue": "1M-5M",
+      "follower_count": "173"
     },
     {
       "name": "Redeem Wealth",
@@ -520,7 +546,10 @@
       "industry": "Financial Services",
       "description": "Helping you create a financial life that aligns with what you value most.",
       "dedupe_key": "redeemwealth.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2021",
+      "annual_revenue": "1M-5M",
+      "follower_count": "192"
     },
     {
       "name": "Grey Matters Neurofeedback",
@@ -565,7 +594,10 @@
       "industry": "Wellness and Fitness Services",
       "description": "What is Neurofeedback?\t\nNeurofeedback teaches the brain to improve important functions like attention, mood, behavior, cognition, and more. Sensors are applied to the client’s scalp and the EEG signal from the brain is amplified and monitored via computer. This signal is then mir",
       "dedupe_key": "greymattersneurofeedback.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2016",
+      "annual_revenue": "0-500K",
+      "follower_count": "93"
     },
     {
       "name": "FREEDOM FINANCIAL AND LIFE PLLC",
@@ -610,7 +642,9 @@
       "industry": "Financial Services",
       "description": "Retirement Account Insurance \nFixed Indexed Annuities\nLife Insurance with Living Benefits\nCash Value Life Insurance\nFinancial Planning\nProfessional Financial Consulting\nPension |  Generating a Lifetime Income Stream that you cannot Outlive\nInvestment Advice\n401(k)\n403(b)\n457\nTSP",
       "dedupe_key": "growprotected.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "1M-5M",
+      "follower_count": "49"
     },
     {
       "name": "Elevate CPA Group",
@@ -621,7 +655,7 @@
       "contact": {
         "name": "RICK WILKENS, CPA",
         "role": "Founder & Owner",
-        "email": ""
+        "email": "rick@elevatecpagroup.com"
       },
       "weakness_score": 44,
       "site_high_count": 1,
@@ -643,8 +677,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "rick@elevatecpagroup.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -655,7 +689,9 @@
       "industry": "Investment Management",
       "description": "Is your financial planning firm hungry for growth? Do you have big goals but feel stuck? Are you unsure of where to go from here? \n\nMeet Elevate CPA Group. We are CPAs, advisors, and accountants who focus solely on the financial services industry. As your strategic growth partner",
       "dedupe_key": "elevatecpagroup.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "1M-5M",
+      "follower_count": "120"
     },
     {
       "name": "Mulberry Health",
@@ -700,7 +736,10 @@
       "industry": "Medical Practices",
       "description": "Mulberry Health is a home based (mobile) physician-led medical group based in Arizona. We provide in home primary care and transitional care services to seniors in private homes, assisted living, and memory care communities. We also provide Men's Health, Women's Health, Medical W",
       "dedupe_key": "mulberrymedical.net",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2025",
+      "annual_revenue": "1M-5M",
+      "follower_count": "325"
     },
     {
       "name": "Scottsdale Chiropractic Wellness Center",
@@ -745,7 +784,9 @@
       "industry": "Wellness and Fitness Services",
       "description": "",
       "dedupe_key": "chiropractorinscottsdale.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "0-500K",
+      "follower_count": "1"
     },
     {
       "name": "First Choice Business Brokers - Acquire. Maximize. Exit.TM Team",
@@ -790,7 +831,10 @@
       "industry": "Financial Services",
       "description": "First Choice Business Brokers assists small to medium size business owners in valuing their business and finding buyers; acting as a professional intermediary throughout the entire selling process.\n\nTo build a team of specialists business brokers that assist entrepreneurial minde",
       "dedupe_key": "broker.doctor",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2019",
+      "annual_revenue": "1M-5M",
+      "follower_count": "685"
     },
     {
       "name": "National Automotive Programs formerly NAPA Insurance Center",
@@ -835,7 +879,10 @@
       "industry": "Insurance",
       "description": "Providing the best of products and people to the NAPA Family nationally.",
       "dedupe_key": "napainsurancecenter.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "1988",
+      "annual_revenue": "1M-5M",
+      "follower_count": "54"
     },
     {
       "name": "Montgomery & Associates Insurance & Financial Services",
@@ -846,7 +893,7 @@
       "contact": {
         "name": "Will Montgomery",
         "role": "CEO | Founder",
-        "email": ""
+        "email": "wmontgomery@montgomeryassociatesins.com"
       },
       "weakness_score": 44,
       "site_high_count": 1,
@@ -868,8 +915,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "wmontgomery@montgomeryassociatesins.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -880,7 +927,10 @@
       "industry": "Insurance",
       "description": "Our company is a local multi-lined insurance and financial firm. Our team works with individuals and companies to provide them with risk-management solutions.\n\nAt Montgomery & Associates Insurance Agency, we offer every type of insurance coverage you could need, so every aspect o",
       "dedupe_key": "montgomeryassociatesins.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2010",
+      "annual_revenue": "5M-10M",
+      "follower_count": "133"
     },
     {
       "name": "Accelerated, LLC",
@@ -919,7 +969,10 @@
       "industry": "Insurance",
       "description": "Accelerated is a business consulting firm and wholesale insurance agency helping retail brokers save their clients from the healthcare status quo by offering a supplemental benefits program that can increase take-home pay, expand access to care, and lower reliance on your group h",
       "dedupe_key": "accelcg.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2007",
+      "annual_revenue": "1M-5M",
+      "follower_count": "60"
     },
     {
       "name": "Vision401K",
@@ -958,7 +1011,9 @@
       "industry": "Financial Services",
       "description": "At Vision401k our expertise and hands on approach allows Plan Sponsors to reduce the time they spend on their Company's retirement plan. Whether it is benchmarking your plan, answering participant questions or reviewing plan options, we’re here as your plan expert. \n\nOur goal is",
       "dedupe_key": "vision401k.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "1M-5M",
+      "follower_count": "52"
     },
     {
       "name": "Schadel Financial Group",
@@ -997,7 +1052,9 @@
       "industry": "Financial Services",
       "description": "Securities and Advisory services offered through LPL Financial, a registered investment advisor. Member SIPC (sipc.org).\n\nThe financial professionals associated with Schadel Financial Group may discuss and/or transact business only with residents of the states in which they are p",
       "dedupe_key": "schadelfg.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "1M-5M",
+      "follower_count": "800"
     },
     {
       "name": "TMG Wealth Advisors, Inc.",
@@ -1008,7 +1065,7 @@
       "contact": {
         "name": "Kurt Morgan",
         "role": "President",
-        "email": ""
+        "email": "kurt@tmgwealth.net"
       },
       "weakness_score": 33,
       "site_high_count": 1,
@@ -1024,8 +1081,8 @@
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "no_email",
-      "verified_email": "",
+      "email_verified": "mx_ok",
+      "verified_email": "kurt@tmgwealth.net",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
@@ -1036,7 +1093,10 @@
       "industry": "Financial Services",
       "description": "TMG Wealth Advisors is a comprehensive financial services & planning firm committed to helping individuals and families improve their long-term success in life. \n\nWe operate with the premise of 'Connecting Values to Goals'. Using a Values-Based Financial Planning methodology, we",
       "dedupe_key": "tmgwealth.net",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2002",
+      "annual_revenue": "1M-5M",
+      "follower_count": "368"
     },
     {
       "name": "Westgate Financial Group",
@@ -1075,7 +1135,9 @@
       "industry": "Financial Services",
       "description": "At Westgate Financial Group, our mission is to empower our clients to work toward achieving long-term financial success by providing professional guidance and support throughout their financial journey. We recognize that individuals and families strive to create a better future f",
       "dedupe_key": "westgatefinancialgroup.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "1M-5M",
+      "follower_count": "15"
     },
     {
       "name": "Debits & Credits Bookkeeping, LLC",
@@ -1114,7 +1176,10 @@
       "industry": "Accounting",
       "description": "With today’s changing business environment, having professional help can benefit your business in more ways than one. Our team can provide you with tailored services designed to cover your business’s unique needs.",
       "dedupe_key": "debitscreditsbookkeeping.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2014",
+      "annual_revenue": "500K-1M",
+      "follower_count": "30"
     },
     {
       "name": "Irving Planning & Investments, Ltd.",
@@ -1153,7 +1218,10 @@
       "industry": "Financial Services",
       "description": "Irving Planning & Investments, Ltd. is a multi-generational, family-run financial firm. We offer over five decades of combined financial services experience. Part of our family legacy is the commitment to building lasting relationships with our clients and their children. \n\nEmpha",
       "dedupe_key": "irvingplanning.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "1995",
+      "annual_revenue": "1M-5M",
+      "follower_count": "20"
     },
     {
       "name": "Global Strategic NextGen OCIO",
@@ -1192,7 +1260,10 @@
       "industry": "Investment Management",
       "description": "NextGen Outsourced Chief Investment Officer (OCIO)\n\nGlobal Strategic Investment Solutions (GSIS) is an Outsourced Chief Investment Officer firm dedicated to a globally diversified portfolio approach to investing.\n\nThe investment community, supported by the media, is set up to enc",
       "dedupe_key": "gsisus.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "2015",
+      "annual_revenue": "1M-5M",
+      "follower_count": "378"
     },
     {
       "name": "Kramer & Golden Public Accounting Group",
@@ -1231,7 +1302,9 @@
       "industry": "Accounting",
       "description": "We at Kramer & Golden Public Accounting Group, provide a wide range of tax and financial accounting services. Our team is both talented and experienced and will take a personal approach to meeting your needs. Our goal is to help our clients maintain individual and professional fi",
       "dedupe_key": "kramergoldencpa.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "annual_revenue": "500K-1M",
+      "follower_count": "4"
     },
     {
       "name": "Charles Andrew CPA",
@@ -1270,7 +1343,10 @@
       "industry": "Accounting",
       "description": "Provides services to small businesses, such as consulting, accounting, business planning, and tax preparation.   Provides tax planning and tax preparation services to individuals.  Services are personalized to meet the needs of a variety of small businesses and diverse individual",
       "dedupe_key": "charlesandrewcpa.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "1988",
+      "annual_revenue": "500K-1M",
+      "follower_count": "24"
     },
     {
       "name": "Larson Financial Advisors",
@@ -1309,7 +1385,10 @@
       "industry": "Financial Services",
       "description": "Larson Financial Advisors is a fiduciary firm specializing in wealth management for professionals, business owners and retirees.",
       "dedupe_key": "larsonadvisors.com",
-      "queue_date": "2026-06-14"
+      "queue_date": "2026-06-14",
+      "founded": "1996",
+      "annual_revenue": "1M-5M",
+      "follower_count": "36"
     }
   ]
 }

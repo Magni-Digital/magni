@@ -177,6 +177,9 @@ def _load_enriched_keepers():
                 "company_size": r.get("size", ""),
                 "industry": r.get("industry", ""),
                 "description": r.get("description", ""),
+                "founded": r.get("founded", ""),
+                "annual_revenue": r.get("annual_revenue", ""),
+                "follower_count": r.get("follower_count", ""),
             })
     return out
 
@@ -204,6 +207,8 @@ def _write_research():
                 "company_linkedin": r.get("company_linkedin", ""),
                 "employee_count": r.get("employee_count", ""), "company_size": r.get("size", ""),
                 "industry": r.get("industry", ""), "description": r.get("description", ""),
+                "founded": r.get("founded", ""), "annual_revenue": r.get("annual_revenue", ""),
+                "follower_count": r.get("follower_count", ""),
                 "source": r.get("source", "SalesNav/Clay"),
                 "dedupe_key": "research:" + name.lower().strip(),
             })
@@ -279,6 +284,9 @@ def to_entry(rec, queue_date):
         "company_size": rec.get("company_size", ""),
         "industry": rec.get("industry", ""),
         "description": rec.get("description", ""),
+        "founded": rec.get("founded", ""),
+        "annual_revenue": rec.get("annual_revenue", ""),
+        "follower_count": rec.get("follower_count", ""),
         "dedupe_key": rec.get("dedupe_key") or D.key_for(rec),
         "queue_date": queue_date,
     }

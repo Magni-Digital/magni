@@ -91,6 +91,32 @@ function firmo(p) {
   if (p.industry) bits.push(esc(p.industry));
   return bits.length ? `<div class="firmo">${bits.join(' · ')}</div>` : '';
 }
+function detailRows(p, includeDesc = true) {
+  const rows = [
+    ['Website', p.website_raw || (p.domain ? 'https://' + p.domain : '')],
+    ['Employees', p.employee_count || p.company_size],
+    ['Industry', p.industry],
+    ['Founded', p.founded],
+    ['Annual revenue', p.annual_revenue],
+    ['LinkedIn followers', p.follower_count],
+    ['Location', [p.city, p.state].filter(Boolean).join(', ')],
+    ['Source', p.source],
+  ].filter((r) => r[1]);
+  const desc = (includeDesc && p.description) ? `<p class="desc">${esc(p.description)}</p>` : '';
+  return `<button class="moreinfo" data-more>More info ▾</button>
+    <div class="details" hidden>${desc}<dl class="detgrid">${rows.map((r) => `<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl></div>`;
+}
+
+function wireMore(el) {
+  const btn = el.querySelector('[data-more]');
+  if (!btn) return;
+  btn.onclick = () => {
+    const d = el.querySelector('.details');
+    const open = d.hasAttribute('hidden') ? (d.removeAttribute('hidden'), true) : (d.setAttribute('hidden', ''), false);
+    btn.textContent = open ? 'Less info ▴' : 'More info ▾';
+  };
+}
+
 function linkedinRow(p) {
   const out = [];
   if (p.person_linkedin) out.push(`<a class="li" href="${esc(p.person_linkedin)}" target="_blank" rel="noopener">in/ contact ↗</a>`);
@@ -139,11 +165,13 @@ function queueCard(p) {
       <p class="obs-label">Draft observation</p>
       <textarea class="obs">${esc(obsText)}</textarea>
       <div class="obs-src">${p.observation_source === 'claude' ? 'AI-drafted' : 'template'} from the checked fact${cited ? ` · cites: ${esc(cited)}` : ''}</div>
+      ${detailRows(p, true)}
       <div class="actions" data-actions></div>
     </div>`;
   const ta = el.querySelector('textarea.obs');
   ta.oninput = () => { const cur = DISPOS[p.dedupe_key]; if (cur) { cur.observation = ta.value; saveDispos(); } };
   renderActions(el.querySelector('[data-actions]'), p, ta, el, true);
+  wireMore(el);
   return el;
 }
 
@@ -160,11 +188,13 @@ function researchCard(p) {
       ${p.description ? `<p class="desc">${esc(p.description)}</p>` : ''}
       <p class="obs-help">Enrichment found no website. Open their LinkedIn, check for a site, then write your observation (no site at all is a strong opener).</p>
       <textarea class="obs" placeholder="Your observation once you've looked them up…">${esc(noteText)}</textarea>
+      ${detailRows(p, false)}
       <div class="actions" data-actions></div>
     </div>`;
   const ta = el.querySelector('textarea.obs');
   ta.oninput = () => { const cur = DISPOS[p.dedupe_key]; if (cur) { cur.observation = ta.value; saveDispos(); } };
   renderActions(el.querySelector('[data-actions]'), p, ta, el, false);
+  wireMore(el);
   return el;
 }
 
