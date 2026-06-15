@@ -14,5 +14,7 @@ __pycache__/
 *.pyc
 .DS_Store
 Lists/
-state/qualify_cache.json
 state/needs_waterfall.csv
+# NOTE: state/keepers_enriched.csv, state/research_leads.csv, state/qualify_cache.json,
+# state/seen.json ARE committed (private repo) so the daily GitHub Action can
+# reproduce the queue without re-crawling. They hold lead data — keep the repo private.

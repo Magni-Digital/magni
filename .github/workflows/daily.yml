@@ -11,9 +11,9 @@ name: Daily review queue
 # inputs aren't present, so a stray manual run can't overwrite real data.
 
 on:
-  workflow_dispatch: {}     # manual "Run workflow" button only
-  # schedule:
-  #   - cron: "0 7 * * *"   # re-enable once enriched inputs live in the repo
+  workflow_dispatch: {}                 # manual "Run workflow" button
+  schedule:
+    - cron: "0 7 * * *"                 # ~2 AM Central; refreshes the queue daily
 
 permissions:
   contents: write
@@ -44,8 +44,10 @@ jobs:
 
       - name: Build today's queue
         env:
-          # Optional. Set these as repo secrets for nicer drafts / real
-          # deliverability checks. Unset → true-template drafts + MX-only checks.
+          # HUBSPOT_TOKEN lets CI pull new HubSpot companies + read sent/skip state.
+          # Add it as a GitHub Actions secret (Settings → Secrets → Actions).
+          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
+          # Optional: nicer AI drafts / real deliverability. Unset → templates + MX.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           EMAIL_VERIFY_API_URL: ${{ secrets.EMAIL_VERIFY_API_URL }}
           EMAIL_VERIFY_API_KEY: ${{ secrets.EMAIL_VERIFY_API_KEY }}
