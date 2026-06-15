@@ -19,9 +19,12 @@ let DATA = { queue: [], research: [] };
 let VIEW = 'queue';
 let FILTERS = { text: '', vertical: '', city: '', email: '' };
 let DISPOS = loadDispos();
+let NOTES = loadNotes();
 
 function loadDispos() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch { return {}; } }
 function saveDispos() { try { localStorage.setItem(LS_KEY, JSON.stringify(DISPOS)); } catch {} }
+function loadNotes() { try { return JSON.parse(localStorage.getItem('magni2_notes')) || {}; } catch { return {}; } }
+function saveNotes() { try { localStorage.setItem('magni2_notes', JSON.stringify(NOTES)); } catch {} }
 
 async function boot() {
   const [q, r] = await Promise.all([fetchJson('./data.json'), fetchJson('./research.json')]);
@@ -165,13 +168,14 @@ function queueCard(p) {
       <p class="obs-label">Draft observation</p>
       <textarea class="obs">${esc(obsText)}</textarea>
       <div class="obs-src">${p.observation_source === 'claude' ? 'AI-drafted' : 'template'} from the checked fact${cited ? ` · cites: ${esc(cited)}` : ''}</div>
+      ${notesBlock(p)}
       ${detailRows(p, true)}
       <div class="actions" data-actions></div>
     </div>`;
   const ta = el.querySelector('textarea.obs');
   ta.oninput = () => { const cur = DISPOS[p.dedupe_key]; if (cur) { cur.observation = ta.value; saveDispos(); } };
   renderActions(el.querySelector('[data-actions]'), p, ta, el, true);
-  wireMore(el);
+  wireMore(el); wireExtras(el, p);
   return el;
 }
 
@@ -188,13 +192,15 @@ function researchCard(p) {
       ${p.description ? `<p class="desc">${esc(p.description)}</p>` : ''}
       <p class="obs-help">Enrichment found no website. Open their LinkedIn, check for a site, then write your observation (no site at all is a strong opener).</p>
       <textarea class="obs" placeholder="Your observation once you've looked them up…">${esc(noteText)}</textarea>
+      ${siteBlock(p)}
+      ${notesBlock(p)}
       ${detailRows(p, false)}
       <div class="actions" data-actions></div>
     </div>`;
   const ta = el.querySelector('textarea.obs');
   ta.oninput = () => { const cur = DISPOS[p.dedupe_key]; if (cur) { cur.observation = ta.value; saveDispos(); } };
   renderActions(el.querySelector('[data-actions]'), p, ta, el, false);
-  wireMore(el);
+  wireMore(el); wireExtras(el, p);
   return el;
 }
 
@@ -226,12 +232,44 @@ function disposition(p, status, observation, cardEl, isQueue) {
       email: emailOf(p), observation, status });
   }
 }
-async function saveToHubSpot(payload) {
+async function saveToHubSpot(payload) { return postHubSpot(payload, 'Saved to HubSpot ✓', 'Sent saved locally'); }
+async function postHubSpot(payload, okMsg, failMsg) {
   try {
     const r = await fetch('/api/hubspot', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
     const d = await r.json().catch(() => ({ ok: r.ok }));
-    toast(d.ok ? 'Saved to HubSpot ✓' : 'Sent saved locally (HubSpot: ' + (d.error || 'unavailable') + ')');
-  } catch { toast('Sent saved locally (HubSpot offline)'); }
+    toast(d.ok ? okMsg : (failMsg + ' (HubSpot: ' + (d.error || 'unavailable') + ')'));
+    return d.ok;
+  } catch { toast(failMsg + ' (HubSpot offline)'); return false; }
+}
+
+function notesBlock(p) {
+  return `<div class="notes-wrap">
+    <p class="obs-label">Your notes</p>
+    <textarea class="note" placeholder="Notes that stay with this record (saved to HubSpot)…">${esc(NOTES[p.dedupe_key] || '')}</textarea>
+    <button class="ghost small" data-savenote>Save note</button></div>`;
+}
+function siteBlock(p) {
+  return `<div class="site-wrap">
+    <p class="obs-label">Found their website? Add it</p>
+    <input class="siteinput" type="url" placeholder="https://theirpractice.com" />
+    <button class="ghost small" data-savesite>Save site</button>
+    <p class="obs-help">Saves to HubSpot; the next run qualifies it and it moves to Today's queue.</p></div>`;
+}
+function wireExtras(el, p) {
+  const nb = el.querySelector('[data-savenote]');
+  if (nb) nb.onclick = () => {
+    const t = el.querySelector('textarea.note').value;
+    NOTES[p.dedupe_key] = t; saveNotes();
+    postHubSpot({ action: 'note', hsCompanyId: p.hs_company_id || '', domain: p.domain || '',
+      companyName: p.name || '', email: emailOf(p), note: t }, 'Note saved ✓', 'Note saved locally');
+  };
+  const sb = el.querySelector('[data-savesite]');
+  if (sb) sb.onclick = () => {
+    const url = el.querySelector('.siteinput').value.trim();
+    if (!url) { toast('Enter a website first'); return; }
+    postHubSpot({ action: 'set_website', companyName: p.name || '', domain: url.replace(/^https?:\/\//, '').replace(/\/.*$/, '') },
+      'Website saved ✓ — will qualify next run', 'Website saved locally');
+  };
 }
 function undo(p, cardEl) {
   delete DISPOS[p.dedupe_key]; saveDispos(); cardEl.classList.remove('done');

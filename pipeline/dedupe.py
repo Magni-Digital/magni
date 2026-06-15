@@ -86,7 +86,10 @@ def excluded(rec, seen, now):
         if _days_since(entry.get("last_surfaced_iso", ""), now) < SKIP_COOLDOWN_DAYS:
             return True, "skipped_cooldown"
         return False, "skip_cooldown_elapsed"
-    return True, "already_surfaced"
+    # surfaced-but-not-acted-on: do NOT retire — the queue is a rolling working set,
+    # so an unworked lead stays eligible and re-appears (re-ranked) until she
+    # sends or skips it. Only sent/skipped (above) leave the queue.
+    return False, "surfaced_unworked"
 
 
 def annotate(recs, seen, now):

@@ -130,6 +130,15 @@ textarea.obs:focus { outline: none; border-color: var(--accent); }
 .detgrid dd { margin: 0; color: var(--ink); word-break: break-word; }
 .details .desc { margin: 0 0 10px; }
 
+/* ── notes + add-website ── */
+.notes-wrap, .site-wrap { margin-top: 14px; }
+textarea.note { width: 100%; min-height: 54px; resize: vertical; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 10px; font: inherit; color: var(--ink); background: #fff; }
+textarea.note:focus { outline: none; border-color: var(--accent); }
+button.small { font-size: 12px; padding: 6px 12px; margin-top: 7px; }
+.site-wrap { background: var(--warn-bg); border: 1px solid #f0d8b8; border-radius: 10px; padding: 12px 14px; }
+input.siteinput { width: 100%; padding: 13px 14px; font-size: 15px; border: 1.5px solid #e2c79a; border-radius: 10px; background: #fff; color: var(--ink); }
+input.siteinput:focus { outline: none; border-color: var(--accent); }
+
 /* ── actions ── */
 .actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
 button { font: inherit; cursor: pointer; border-radius: 9px; padding: 9px 15px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-weight: 600; }
