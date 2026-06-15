@@ -56,6 +56,20 @@ auto-matched — double-check it's really theirs before sending).
 `Download CSV` exports the day's list in the CRM's exact columns if you ever want
 it offline.
 
+**More on each card:**
+- **Notes** — a box for your own notes that saves to HubSpot (stays with the record).
+- **More info ▾** — expands employees, industry, founded, annual revenue, LinkedIn
+  followers, full description.
+- **(Research tab) Add their website** — found their site via LinkedIn? Paste it;
+  it saves to HubSpot and the next refresh qualifies it into Today's queue.
+
+**The queue is a rolling working set:** you won't lose leads you don't get to.
+Sent ones retire; skipped ones return in 30 days; anything you don't touch stays
+and comes back next time. There are hundreds queued behind today's view.
+
+**Adding leads:** add a company (with a website) in **HubSpot** and it flows into
+the tool on the next refresh — no file or terminal needed.
+
 ---
 
 ## Running the pipeline
