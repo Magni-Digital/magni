@@ -106,10 +106,18 @@ def _backfill_emails(qualifiable):
 
 
 def main():
-    src = sys.argv[1] if len(sys.argv) > 1 else max(
-        glob.glob("Lists/*export*.csv"), key=lambda p: Path(p).stat().st_mtime)
-    rows = list(csv.DictReader(open(src, encoding="utf-8-sig", errors="replace")))
-    print(f"source: {src}  ({len(rows)} rows)")
+    # Additive: process EVERY Clay export in Lists/ (or one passed explicitly), so
+    # dropping a new batch in Lists/ adds to the pool rather than replacing it.
+    # Dedupe-by-domain below collapses overlaps; seen.json retires worked leads.
+    srcs = [sys.argv[1]] if len(sys.argv) > 1 else sorted(glob.glob("Lists/*export*.csv"))
+    if not srcs:
+        sys.exit("No Clay export found in Lists/ (expected a file matching *export*.csv).")
+    rows = []
+    for s in srcs:
+        these = list(csv.DictReader(open(s, encoding="utf-8-sig", errors="replace")))
+        rows += these
+        print(f"source: {s}  ({len(these)} rows)")
+    print(f"total input rows across {len(srcs)} file(s): {len(rows)}")
 
     qualifiable, research, drop = [], [], Counter()
     seen_dom, seen_name = set(), set()
