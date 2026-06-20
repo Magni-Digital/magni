@@ -60,6 +60,23 @@ function wire() {
   };
   $('export').onclick = exportDispositions;
   $('download').onclick = downloadCsv;
+  $('import-file').onchange = importLeads;
+}
+
+// Import a lead CSV from the tool (no terminal). Hands off to /api/upload, which
+// commits the file + triggers the pipeline; new leads appear after it reruns.
+async function importLeads(e) {
+  const file = e.target.files && e.target.files[0];
+  e.target.value = '';
+  if (!file) return;
+  toast('Uploading ' + file.name + '…');
+  const fd = new FormData(); fd.append('file', file);
+  try {
+    const r = await fetch('/api/upload', { method: 'POST', body: fd });
+    const d = await r.json().catch(() => ({ ok: r.ok }));
+    if (d.ok) toast(`Imported ${d.rows ?? ''} rows — processing now; new leads appear in a few minutes.`);
+    else toast('Import failed: ' + (d.error || 'unavailable'));
+  } catch { toast('Import failed (offline)'); }
 }
 
 // Build the day's list as CSV — in the CRM's columns, carrying her edited

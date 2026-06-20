@@ -42,6 +42,9 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
+      - name: Ingest any uploaded lead batches
+        run: python3 build_enriched.py || echo "no new Lists exports to ingest"
+
       - name: Build today's queue
         env:
           # Optional: nicer AI drafts / real deliverability. Unset → templates + MX.

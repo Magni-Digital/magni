@@ -105,6 +105,27 @@ def _backfill_emails(qualifiable):
     return n
 
 
+def _merge_into(path, new_rows, key_fn, cols):
+    """Union new_rows into the CSV at path, deduped by key_fn. Existing rows win
+    (preserves backfilled emails). Returns count of genuinely-new rows added."""
+    existing = []
+    if path.exists():
+        existing = list(csv.DictReader(open(path, encoding="utf-8-sig", errors="replace")))
+    seen = {key_fn(r) for r in existing}
+    added = [r for r in new_rows if key_fn(r) not in seen and key_fn(r)]
+    # de-dup the new additions among themselves too
+    out, addseen = list(existing), set()
+    for r in added:
+        k = key_fn(r)
+        if k in addseen:
+            continue
+        addseen.add(k); out.append(r)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore"); w.writeheader(); w.writerows(out)
+    return len(addseen)
+
+
 def main():
     # Additive: process EVERY Clay export in Lists/ (or one passed explicitly), so
     # dropping a new batch in Lists/ adds to the pool rather than replacing it.
@@ -143,16 +164,18 @@ def main():
 
     n_bf = _backfill_emails(qualifiable)
 
-    (ROOT / "state").mkdir(exist_ok=True)
-    with open(ROOT / "state" / "keepers_enriched.csv", "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=OUT_COLS); w.writeheader(); w.writerows(qualifiable)
+    # ADDITIVE: merge into the existing committed output (existing wins on dup, so
+    # backfilled emails / prior data are preserved). Lets an uploaded batch ADD
+    # leads without needing the original raw export present (e.g. in CI).
+    kpath = ROOT / "state" / "keepers_enriched.csv"
+    rpath = ROOT / "state" / "research_leads.csv"
+    n_new_q = _merge_into(kpath, qualifiable, lambda r: r.get("domain", ""), OUT_COLS)
     rcols = [c for c in OUT_COLS if c not in ("domain", "website", "email", "hs_company_id")]
-    with open(ROOT / "state" / "research_leads.csv", "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=rcols, extrasaction="ignore"); w.writeheader(); w.writerows(research)
+    n_new_r = _merge_into(rpath, research, lambda r: (r.get("company", "").lower(), r.get("city", "").lower()), rcols)
 
-    print(f"qualifiable (has domain): {len(qualifiable)}  → state/keepers_enriched.csv")
+    print(f"qualifiable (has domain): {n_new_q} new → state/keepers_enriched.csv (merged)")
     print(f"waterfall emails backfilled: {n_bf}")
-    print(f"research (no domain, LinkedIn): {len(research)}  → state/research_leads.csv")
+    print(f"research (no domain, LinkedIn): {n_new_r} new → state/research_leads.csv (merged)")
     print(f"dropped: {dict(drop)}")
 
 
