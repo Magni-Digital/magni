@@ -3,8 +3,9 @@
  * Two views: "queue" (qualified weak-site leads from data.json) and "research"
  * (no-site leads from research.json — LinkedIn-first, for manual lookup). Each
  * card carries LinkedIn + firmographics. Dispositions + edits persist to
- * localStorage; on "Mark sent" the queue posts to /api/hubspot (best-effort).
- * Nothing is ever sent to a prospect from here.
+ * localStorage, and Download CSV exports the day's work (with her edits + notes)
+ * into the spreadsheet's columns. No external systems. Nothing is ever sent to a
+ * prospect from here.
  */
 const LS_KEY = 'magni2_dispositions';
 const EMAIL_LABEL = {
@@ -25,6 +26,8 @@ function loadDispos() { try { return JSON.parse(localStorage.getItem(LS_KEY)) ||
 function saveDispos() { try { localStorage.setItem(LS_KEY, JSON.stringify(DISPOS)); } catch {} }
 function loadNotes() { try { return JSON.parse(localStorage.getItem('magni2_notes')) || {}; } catch { return {}; } }
 function saveNotes() { try { localStorage.setItem('magni2_notes', JSON.stringify(NOTES)); } catch {} }
+let SITES = (() => { try { return JSON.parse(localStorage.getItem('magni2_sites')) || {}; } catch { return {}; } })();
+function saveSites() { try { localStorage.setItem('magni2_sites', JSON.stringify(SITES)); } catch {} }
 
 async function boot() {
   const [q, r] = await Promise.all([fetchJson('./data.json'), fetchJson('./research.json')]);
@@ -56,6 +59,30 @@ function wire() {
     render();
   };
   $('export').onclick = exportDispositions;
+  $('download').onclick = downloadCsv;
+}
+
+// Build the day's list as CSV — in the CRM's columns, carrying her edited
+// observation, notes, status, and any website she found. The sheet IS the CRM now.
+function downloadCsv() {
+  const list = DATA[VIEW].filter(matches);
+  const cols = ['Company', 'Contact Name', 'Role', 'Website URL', 'Site Observation (1 line)',
+    'Email', 'Email Verified?', 'Source', 'Status', 'Notes'];
+  const EVL = { deliverable: 'Verified', mx_ok: 'Verified', risky: 'Risky', undeliverable: 'Bad', unverified: 'Unverified', no_email: 'No email' };
+  const rows = [cols];
+  list.forEach((p) => {
+    const d = dispoFor(p);
+    const obs = (d && d.observation != null) ? d.observation : (p.draft_observation || '');
+    const site = p.website_raw || (p.domain ? 'https://' + p.domain : (SITES[p.dedupe_key] ? 'https://' + SITES[p.dedupe_key] : ''));
+    rows.push([p.name || '', (p.contact && p.contact.name) || '', (p.contact && p.contact.role) || '', site, obs,
+      emailOf(p), EVL[p.email_verified] || p.email_verified || '', p.source || '',
+      d ? (d.status === 'sent' ? '1st Sent' : 'Skipped') : 'Not Contacted', NOTES[p.dedupe_key] || '']);
+  });
+  const csv = rows.map((r) => r.map((c) => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+  a.download = 'magni-' + VIEW + '.csv'; a.click(); URL.revokeObjectURL(a.href);
+  toast('CSV downloaded (' + (list.length) + ' rows)');
 }
 
 function populateFilters() {
@@ -227,19 +254,6 @@ function disposition(p, status, observation, cardEl, isQueue) {
   renderActions(cardEl.querySelector('[data-actions]'), p, cardEl.querySelector('textarea.obs'), cardEl, isQueue);
   updateCounts();
   toast(status === 'sent' ? 'Marked sent ✓' : 'Skipped');
-  if (status === 'sent' && isQueue) {
-    saveToHubSpot({ hsCompanyId: p.hs_company_id || '', domain: p.domain || '', companyName: p.name || '',
-      email: emailOf(p), observation, status });
-  }
-}
-async function saveToHubSpot(payload) { return postHubSpot(payload, 'Saved to HubSpot ✓', 'Sent saved locally'); }
-async function postHubSpot(payload, okMsg, failMsg) {
-  try {
-    const r = await fetch('/api/hubspot', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-    const d = await r.json().catch(() => ({ ok: r.ok }));
-    toast(d.ok ? okMsg : (failMsg + ' (HubSpot: ' + (d.error || 'unavailable') + ')'));
-    return d.ok;
-  } catch { toast(failMsg + ' (HubSpot offline)'); return false; }
 }
 
 function notesBlock(p) {
@@ -258,17 +272,15 @@ function siteBlock(p) {
 function wireExtras(el, p) {
   const nb = el.querySelector('[data-savenote]');
   if (nb) nb.onclick = () => {
-    const t = el.querySelector('textarea.note').value;
-    NOTES[p.dedupe_key] = t; saveNotes();
-    postHubSpot({ action: 'note', hsCompanyId: p.hs_company_id || '', domain: p.domain || '',
-      companyName: p.name || '', email: emailOf(p), note: t }, 'Note saved ✓', 'Note saved locally');
+    NOTES[p.dedupe_key] = el.querySelector('textarea.note').value; saveNotes();
+    toast('Note saved ✓ (included in Download CSV)');
   };
   const sb = el.querySelector('[data-savesite]');
   if (sb) sb.onclick = () => {
     const url = el.querySelector('.siteinput').value.trim();
     if (!url) { toast('Enter a website first'); return; }
-    postHubSpot({ action: 'set_website', companyName: p.name || '', domain: url.replace(/^https?:\/\//, '').replace(/\/.*$/, '') },
-      'Website saved ✓ — will qualify next run', 'Website saved locally');
+    SITES[p.dedupe_key] = url.replace(/^https?:\/\//, '').replace(/\/.*$/, ''); saveSites();
+    toast('Website saved ✓ — it\'s in your CSV; add to inbox.csv to qualify it');
   };
 }
 function undo(p, cardEl) {

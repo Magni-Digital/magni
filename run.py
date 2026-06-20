@@ -385,24 +385,8 @@ def main():
 
     # 1) ingest — inbox.csv + CRM xlsx + any HubSpot-resolved candidates
     cands, prior = load_candidates(INBOX, CRM)
-    hs_cands = _load_hubspot_candidates() + _load_enriched_keepers()
+    hs_cands = _load_enriched_keepers()
     cands += hs_cands
-
-    # HubSpot-as-hub: pull companies added in HubSpot + read sent/skipped state
-    hs_sent, hs_skipped = set(), set()
-    try:
-        from pipeline.hubspot import HubSpot
-        from pipeline import hubspot_pull
-        _hs = HubSpot()
-        known = {c.get("domain") for c in cands if c.get("domain")}
-        pulled = hubspot_pull.pull_new(_hs, known)
-        cands += pulled
-        hs_sent, hs_skipped = hubspot_pull.status_domains(_hs)
-        print(f"▸ HubSpot hub: +{len(pulled)} new companies pulled, "
-              f"{len(hs_sent)} sent / {len(hs_skipped)} skipped on file")
-    except Exception as e:
-        print(f"▸ HubSpot hub: offline ({type(e).__name__}) — running from local sources only")
-
     if args.limit:
         cands = cands[:args.limit]
     print(f"▸ ingested {len(cands)} candidates to qualify "
@@ -442,8 +426,7 @@ def main():
     applied = D.apply_dispositions(seen, dispositions, now_iso)
     D.annotate(cands, seen, now)
     eligible = [c for c in cands if c.get("qualify_status") == "qualified"
-                and not c.get("seen_excluded") and c.get("dedupe_key")
-                and c.get("domain") not in hs_sent and c.get("domain") not in hs_skipped]
+                and not c.get("seen_excluded") and c.get("dedupe_key")]
     eligible.sort(key=rank_key)
     queued = eligible[:args.target]
     print(f"▸ dedupe: {len(seen)} known keys, {applied} dispositions folded → "

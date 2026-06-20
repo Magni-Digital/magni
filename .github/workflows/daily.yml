@@ -44,9 +44,6 @@ jobs:
 
       - name: Build today's queue
         env:
-          # HUBSPOT_TOKEN lets CI pull new HubSpot companies + read sent/skip state.
-          # Add it as a GitHub Actions secret (Settings → Secrets → Actions).
-          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
           # Optional: nicer AI drafts / real deliverability. Unset → templates + MX.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           EMAIL_VERIFY_API_URL: ${{ secrets.EMAIL_VERIFY_API_URL }}

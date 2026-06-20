@@ -46,29 +46,28 @@ waiting each morning. You don't run anything — the list refreshes itself.
    it's actually true**, then rewrite it in your own voice in the box.
 3. **Copy** the observation (and **Copy email** if shown), paste into your own
    email, and send it. *The tool never sends anything.*
-4. Click **Mark sent** (or **Skip**). On Mark sent, the practice + your observation
-   are logged to **HubSpot** automatically, and it won't appear again.
+4. Click **Mark sent** (or **Skip**); it won't appear again.
+5. Hit **Download CSV** — the day's work (your edited observations, notes, sent
+   status) exports in the spreadsheet's exact columns. Paste into the Magni
+   Digital CRM sheet. **That sheet is the CRM.**
 
 Badges to know: **✓ email verified** (good to use), **no email** (you'll need to
 find it / it's on the Research tab), **⚠ confirm site** (the website was
 auto-matched — double-check it's really theirs before sending).
 
-`Download CSV` exports the day's list in the CRM's exact columns if you ever want
-it offline.
-
 **More on each card:**
-- **Notes** — a box for your own notes that saves to HubSpot (stays with the record).
+- **Notes** — a box for your own notes; saved in the tool and included in Download CSV.
 - **More info ▾** — expands employees, industry, founded, annual revenue, LinkedIn
   followers, full description.
 - **(Research tab) Add their website** — found their site via LinkedIn? Paste it;
-  it saves to HubSpot and the next refresh qualifies it into Today's queue.
+  it's saved and included in your CSV (add it to `inbox.csv` to have it qualified).
 
 **The queue is a rolling working set:** you won't lose leads you don't get to.
 Sent ones retire; skipped ones return in 30 days; anything you don't touch stays
 and comes back next time. There are hundreds queued behind today's view.
 
-**Adding leads:** add a company (with a website) in **HubSpot** and it flows into
-the tool on the next refresh — no file or terminal needed.
+**Adding leads:** drop new finds into `inbox.csv` (or a fresh Clay batch via
+`build_enriched.py`) and the next run qualifies them.
 
 ---
 
@@ -135,35 +134,25 @@ state/
 public/                   ← the review page (static site) + data.json + daily-list.csv
 ```
 
-## HubSpot (the backend) + keeper enrichment
+## Bringing in a new batch (Clay enrichment)
 
-HubSpot is the lead store + (eventually) where notes/status persist. Token lives
-in `state/hubspot_token.local` (gitignored).
+The CRM is the spreadsheet. There's no other system to maintain. New leads come
+from a Sales Navigator scrape, enriched in Clay for **website + email**:
 
-- `hs_inventory.py` — read-only audit of what's in HubSpot.
-- `hs_prune.py` — score contacts/companies against the ICP (`pipeline/icp.py`);
-  preview by default, `--live` soft-archives off-target (recoverable 90 days).
-- The cleaned, in-ICP practices ("keepers") mostly lack a website/email — the two
-  fields the tool needs. They're exported to **`state/keepers_to_enrich.csv`**.
+1. Scrape Sales Nav (see the target-market searches you've been using).
+2. Enrich in **Clay** — company **domain/website** + **work email**. *(Don't
+   bother with site-quality checks; Magni does that.)*
+3. Drop the export in `Lists/`, run **`python3 build_enriched.py`** — it filters to
+   ICP, dedupes, and writes `state/keepers_enriched.csv` (+ a `research_leads.csv`
+   for no-website practices).
+4. `python3 run.py` — qualifies, observes, verifies, dedupes → the daily queue.
 
-**Enrichment round-trip (you run the bulk enrichment):**
-1. Take `state/keepers_to_enrich.csv` (cols: `hs_company_id, company, city, state`).
-2. Run it through your enrichment tool (Apollo / Clay / ZoomInfo) to get each
-   practice's **website** and an **owner email**.
-3. Save the result as **`state/keepers_enriched.csv`** — any of these headers work:
-   `hs_company_id, company|name, domain|website, email, contact_name, city, state, practice_type`.
-4. `python3 run.py` — enriched keepers are qualified + observed + verified and
-   join the daily queue (tagged `HubSpot+enriched`, `hs_company_id` carried through).
-
-Rows with no website are skipped by the qualifier (a no-website practice is a
-*lead* but needs a human glance — it's not auto-claimed).
-
-**CRM write-back** (writing resolved domains / notes / sent-status to HubSpot) is
-intentionally NOT automated by the agent — it's gated on operator confirmation or
-an explicit permission you grant, so inferred data never lands in the CRM blind.
+For one-off finds, just add a row to `inbox.csv` (only `company` + `website`
+required) and run.
 
 ## What it deliberately does NOT do
 
-No auto-sending, no sequences, no CRM writes, no scraping LinkedIn for you, no
+No auto-sending, no sequences, no external CRM, no scraping LinkedIn for you, no
 dashboards or scoring of job titles. It does the judgment-heavy part —
-qualification and one true observation — and hands it to you to send.
+qualification and one true observation — hands it to you to send, and exports the
+day's work to your spreadsheet.
