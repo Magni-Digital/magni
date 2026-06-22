@@ -457,8 +457,15 @@ def main():
     DATA_PATH.write_text(json.dumps({"generated": now_iso, "queue_date": queue_date,
                                      "count": len(entries), "practices": entries},
                                     indent=2, ensure_ascii=False))
+    # full pool: EVERY qualified practice (not just today's 30) for the "All leads" tab
+    all_q = sorted([c for c in cands if c.get("qualify_status") == "qualified" and c.get("dedupe_key")],
+                   key=rank_key)
+    all_entries = [to_entry(c, queue_date) for c in all_q]
+    (PUBLIC / "all.json").write_text(json.dumps({"count": len(all_entries), "practices": all_entries},
+                                                indent=2, ensure_ascii=False))
     write_csv(entries)
     print(f"✅ wrote {DATA_PATH.relative_to(ROOT)} ({len(entries)} practices)")
+    print(f"✅ wrote public/all.json ({len(all_entries)} qualified — full pool)")
     print(f"✅ wrote {CSV_PATH.relative_to(ROOT)}")
     print(f"✅ updated {SEEN_PATH.relative_to(ROOT)} ({len(seen)} known keys)")
 

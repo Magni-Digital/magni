@@ -1,1394 +1,1621 @@
 {
-  "generated": "2026-06-14T22:33:50.095844+00:00",
-  "queue_date": "2026-06-14",
+  "generated": "2026-06-22T14:53:14.265151+00:00",
+  "queue_date": "2026-06-22",
   "count": 30,
   "practices": [
     {
-      "name": "Rowlett Hill Collins LLP",
-      "practice_type": "law",
-      "domain": "rowletthill.com",
-      "website_raw": "https://rowletthill.com",
-      "location": "Dallas TX",
-      "contact": {
-        "name": "Don Hill",
-        "role": "Owner",
-        "email": "dhill@rowletthill.com"
-      },
-      "weakness_score": 56,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_viewport",
-          "label": "No mobile viewport tag",
-          "confidence": "high",
-          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "Rowlett Hill Collins LLP's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
-      "observation_cited_signal": "no_viewport",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "dhill@rowletthill.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAfC0MkBp-oWQgHtwP8N1-1ujFEDh_SL8Ms/",
-      "company_linkedin": "https://www.linkedin.com/company/3601125",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Law Practice",
-      "description": "Rowlett Hill Collins LLP is a nationally recognized law firm based in Dallas, TX.  The firm's experienced attorneys represent individuals and companies in legal matters, including both business litigation and complex transactions.\n\nThe firm is AV Rated by Martindale-Hubbell.",
-      "dedupe_key": "rowletthill.com",
-      "queue_date": "2026-06-14",
-      "founded": "2006",
-      "annual_revenue": "500K-1M",
-      "follower_count": "21"
-    },
-    {
-      "name": "Enterprise Risk Strategies",
-      "practice_type": "insurance",
-      "domain": "eriskstrategies.com",
-      "website_raw": "https://eriskstrategies.com",
-      "location": "Mesa Arizona",
-      "contact": {
-        "name": "Luis Filipe, CPA, CMA",
-        "role": "President",
-        "email": "lfilipe@erscaptive.com"
-      },
-      "weakness_score": 56,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "Enterprise Risk Strategies's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "lfilipe@erscaptive.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAA_kXm4BTzNs1x0ilvKzySDrTXxJD6LjkVI/",
-      "company_linkedin": "https://www.linkedin.com/company/1880996",
-      "employee_count": "5",
-      "company_size": "2-10 employees",
-      "industry": "Insurance",
-      "description": "Enterprise Risk Strategies (ERS) is a full-service consulting services, underwriting services, and captive management firm.\n \n---------------------------------------------------------------------\n\nERS is a team of professionals with more than 100 years of combined insurance, alte",
-      "dedupe_key": "eriskstrategies.com",
-      "queue_date": "2026-06-14",
-      "founded": "2011",
-      "annual_revenue": "1M-5M",
-      "follower_count": "113"
-    },
-    {
-      "name": "Markee Valuations, LLC",
-      "practice_type": "financial",
-      "domain": "markeevaluations.com",
-      "website_raw": "https://markeevaluations.com",
-      "location": "Vancouver Washington",
-      "contact": {
-        "name": "Laura Markee, CFA, ASA",
-        "role": "Owner",
-        "email": "info@markeevaluations.com"
-      },
-      "weakness_score": 56,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_viewport",
-          "label": "No mobile viewport tag",
-          "confidence": "high",
-          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "Markee Valuations, LLC's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
-      "observation_cited_signal": "no_viewport",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@markeevaluations.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAGdvTABd6EpvcMr1BEWq0smfAntTENAzNk/",
-      "company_linkedin": "https://www.linkedin.com/company/3518623",
-      "employee_count": "5",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "Empowering Value.\n\nThat's what we're about.  Whether you are buying or selling a business, doing estate planning, pursuing litigation or a divorce, we are committed to empowering you with an experience-driven, detail-focused valuation.\n\nWe understand every circumstance is unique.",
-      "dedupe_key": "markeevaluations.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "1M-5M",
-      "follower_count": "48"
-    },
-    {
-      "name": "Lakeside Investment Group",
-      "practice_type": "real_estate",
-      "domain": "lakesidegroupllc.com",
-      "website_raw": "https://lakesidegroupllc.com",
-      "location": "Dallas Oregon",
-      "contact": {
-        "name": "Carter Weisensee",
-        "role": "Managing Director",
-        "email": "inquiries@lakesideig.com"
-      },
-      "weakness_score": 56,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "Lakeside Investment Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "inquiries@lakesideig.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAFAFDM8Bj8P3EBndk9RzF76533Pu6JZm7hE/",
-      "company_linkedin": "https://www.linkedin.com/company/57356734",
-      "employee_count": "7",
-      "company_size": "2-10 employees",
-      "industry": "Investment Management",
-      "description": "Lakeside Investment Group LLC is a private investment firm interested in investing long-term in real estate opportunities and small to medium sized businesses.",
-      "dedupe_key": "lakesidegroupllc.com",
-      "queue_date": "2026-06-14",
-      "founded": "2016",
-      "annual_revenue": "1M-5M",
-      "follower_count": "33"
-    },
-    {
-      "name": "Penguin Payment Advisors",
-      "practice_type": "consulting",
-      "domain": "penguinpaymentsolutions.com",
-      "website_raw": "https://penguinpaymentsolutions.com",
-      "location": "Scottsdale AZ",
-      "contact": {
-        "name": "Anna Lam",
-        "role": "Founder/CEO",
-        "email": "anna@penguinpaymentsolutions.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "Penguin Payment Advisors's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "anna@penguinpaymentsolutions.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAlY1IcB9AL0lQhjBASvMu3dM3CFWs9wZSw/",
-      "company_linkedin": "https://www.linkedin.com/company/105933940",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Business Consulting and Services",
-      "description": "We help small and medium-sized businesses find the right credit card and ACH processing solutions – saving time, money and frustration. We assess your company's needs and match you with the payment processor that best suits your business - often saving you money!",
-      "dedupe_key": "penguinpaymentsolutions.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "500K-1M",
-      "follower_count": "21"
-    },
-    {
-      "name": "CapStack",
-      "practice_type": "financial",
-      "domain": "capstackco.com",
-      "website_raw": "https://capstackco.com",
-      "location": "Dallas Texas",
-      "contact": {
-        "name": "Blake Schechter",
-        "role": "Managing Partner",
-        "email": "blake@capstackco.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "CapStack's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "blake@capstackco.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAACb3kboB6E-AQz26sNO2BOsyZJgpdopv0mE/",
-      "company_linkedin": "https://www.linkedin.com/company/107486428",
-      "employee_count": "4",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "A boutique debt advisory & private lending firm serving real estate investors, builders, and developers. Our structure is simple: a lean firm with loaded capital - allowing us to move quickly, keep fees low, and tailor financing to fit the deal.\n\nWe specialize in Ground-Up constr",
-      "dedupe_key": "capstackco.com",
-      "queue_date": "2026-06-14",
-      "founded": "2025",
-      "follower_count": "39"
-    },
-    {
-      "name": "Speaking About Benefits",
-      "practice_type": "insurance",
-      "domain": "sites.google.com",
-      "website_raw": "https://sites.google.com",
-      "location": "Franklin Tennessee",
-      "contact": {
-        "name": "Norm Mitchell, LUTCF",
-        "role": "Owner - Retired",
-        "email": "mitchell.n@google.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_viewport",
-          "label": "No mobile viewport tag",
-          "confidence": "high",
-          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "Speaking About Benefits's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
-      "observation_cited_signal": "no_viewport",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "mitchell.n@google.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAGla-cBuHnlx4a5rQL6Q-qigXj8VF1TyIs/",
-      "company_linkedin": "https://www.linkedin.com/company/1713958",
-      "employee_count": "2",
-      "company_size": "Self-employed",
-      "industry": "Insurance",
-      "description": "Norm Mitchell, Speaking About Benefits, does benefit enrollments and group presentations for numerous enrollment companies, brokers and insurance carriers across the US. I have over 50 years experience in the insurance industry and I had my own successful multi-line insurance age",
-      "dedupe_key": "sites.google.com",
-      "queue_date": "2026-06-14",
-      "founded": "2002",
-      "annual_revenue": "1M-5M",
-      "follower_count": "70"
-    },
-    {
-      "name": "Wave Financial Partners",
-      "practice_type": "financial",
-      "domain": "wavefinancialpartners.com",
-      "website_raw": "https://wavefinancialpartners.com",
-      "location": "Englewood Colorado",
-      "contact": {
-        "name": "Mel Tewahade",
-        "role": "Founder and CEO",
-        "email": "service@waveinsuranceagency.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "Wave Financial Partners's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "service@waveinsuranceagency.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAR_tRYBTJrWU9B5RQPAO5MBTHKinX8oFTw/",
-      "company_linkedin": "https://www.linkedin.com/company/1040949",
-      "employee_count": "9",
-      "company_size": "11-50 employees",
-      "industry": "Insurance",
-      "description": "My unique partnership with Wave has given me instant access to over 14 insurance companies & to offer a \"personal shopping service\" to find the best rates for home owners and auto insurance. Ask for a quote, you'll be amazed how much you can save!",
-      "dedupe_key": "wavefinancialpartners.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "5M-10M",
-      "follower_count": "73"
-    },
-    {
-      "name": "Conrad Tax Solutions",
-      "practice_type": "financial",
-      "domain": "conradtax.com",
-      "website_raw": "https://conradtax.com",
-      "location": "Tukwila Washington",
-      "contact": {
-        "name": "Emily Conrad Hollingshead, MBA",
-        "role": "Managing Partner",
-        "email": "taxdata@conradtax.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on Squarespace",
-          "confidence": "low",
-          "evidence_str": "The site is built on Squarespace."
-        }
-      ],
-      "draft_observation": "Conrad Tax Solutions's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "taxdata@conradtax.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAUcp10BjHqxqLKKcl30vFa0o0tiicwTbSU/",
-      "company_linkedin": "https://www.linkedin.com/company/105673335",
-      "employee_count": "3",
-      "company_size": "11-50 employees",
-      "industry": "Financial Services",
-      "description": "Taking the stress and surprises out of tax time",
-      "dedupe_key": "conradtax.com",
-      "queue_date": "2026-06-14",
-      "founded": "1987",
-      "annual_revenue": "10M-25M",
-      "follower_count": "6"
-    },
-    {
-      "name": "IBG Fox & Fin",
-      "practice_type": "financial",
-      "domain": "foxfin.com",
-      "website_raw": "https://foxfin.com",
-      "location": "Scottsdale AZ",
-      "contact": {
-        "name": "Troy Stapley MBA, CMAP",
-        "role": "Managing Director",
-        "email": "troy@foxfin.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "no_cta",
-          "label": "No clear call-to-action",
-          "confidence": "low",
-          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
-        }
-      ],
-      "draft_observation": "IBG Fox & Fin's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "troy@foxfin.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAC0ydcBSjbEIFxPG-_SXp5BEhh5X1AMwlc/",
-      "company_linkedin": "https://www.linkedin.com/company/11389926",
-      "employee_count": "7",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "IBG/Fox & Fin is a financial advisory company that facilitates the mergers and acquisitions of privately held, middle-market companies – with a sharp focus on businesses in the western U.S. that have annual sales between $5 million and $125 million.\n\nWhile our ultimate objective",
-      "dedupe_key": "foxfin.com",
-      "queue_date": "2026-06-14",
-      "founded": "1993",
-      "annual_revenue": "1M-5M",
-      "follower_count": "173"
-    },
-    {
-      "name": "Redeem Wealth",
-      "practice_type": "financial",
-      "domain": "redeemwealth.com",
-      "website_raw": "https://redeemwealth.com",
-      "location": "Gilbert Arizona",
-      "contact": {
-        "name": "Jeremy S.",
-        "role": "Owner/Financial Planner",
-        "email": "info@redeemfinancialgroup.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on Squarespace",
-          "confidence": "low",
-          "evidence_str": "The site is built on Squarespace."
-        }
-      ],
-      "draft_observation": "Redeem Wealth's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@redeemfinancialgroup.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAABUxpSABO3Wc5rmf6pbY-ZQZqomCfj3An2o/",
-      "company_linkedin": "https://www.linkedin.com/company/74087215",
-      "employee_count": "3",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "Helping you create a financial life that aligns with what you value most.",
-      "dedupe_key": "redeemwealth.com",
-      "queue_date": "2026-06-14",
-      "founded": "2021",
-      "annual_revenue": "1M-5M",
-      "follower_count": "192"
-    },
-    {
-      "name": "Grey Matters Neurofeedback",
-      "practice_type": "integrative_health",
-      "domain": "greymattersneurofeedback.com",
-      "website_raw": "https://greymattersneurofeedback.com",
-      "location": "Lakewood CO",
-      "contact": {
-        "name": "Shari Johansson MA, LPC, NCC, BCN, QEEG-D",
-        "role": "Owner/Provider",
-        "email": "info@mindbodyneurotherapy.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on Squarespace",
-          "confidence": "low",
-          "evidence_str": "The site is built on Squarespace."
-        }
-      ],
-      "draft_observation": "Grey Matters Neurofeedback's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@mindbodyneurotherapy.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAA5hO-IBAjGEGIRGMq0NPceymJKbQKefl7M/",
-      "company_linkedin": "https://www.linkedin.com/company/35473414",
-      "employee_count": "4",
-      "company_size": "2-10 employees",
-      "industry": "Wellness and Fitness Services",
-      "description": "What is Neurofeedback?\t\nNeurofeedback teaches the brain to improve important functions like attention, mood, behavior, cognition, and more. Sensors are applied to the client’s scalp and the EEG signal from the brain is amplified and monitored via computer. This signal is then mir",
-      "dedupe_key": "greymattersneurofeedback.com",
-      "queue_date": "2026-06-14",
-      "founded": "2016",
-      "annual_revenue": "0-500K",
-      "follower_count": "93"
-    },
-    {
-      "name": "FREEDOM FINANCIAL AND LIFE PLLC",
-      "practice_type": "financial",
-      "domain": "growprotected.com",
-      "website_raw": "https://growprotected.com",
-      "location": "SCOTTSDALE AZ",
-      "contact": {
-        "name": "Mitch Balasu",
-        "role": "President and CEO",
-        "email": "mitch@growprotected.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "FREEDOM FINANCIAL AND LIFE PLLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "mitch@growprotected.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAGAQlQBxkuXqTV3ocyTB7dsL9aZyJh5oaM/",
-      "company_linkedin": "https://www.linkedin.com/company/70535349",
-      "employee_count": "5",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "Retirement Account Insurance \nFixed Indexed Annuities\nLife Insurance with Living Benefits\nCash Value Life Insurance\nFinancial Planning\nProfessional Financial Consulting\nPension |  Generating a Lifetime Income Stream that you cannot Outlive\nInvestment Advice\n401(k)\n403(b)\n457\nTSP",
-      "dedupe_key": "growprotected.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "1M-5M",
-      "follower_count": "49"
-    },
-    {
-      "name": "Elevate CPA Group",
-      "practice_type": "financial",
-      "domain": "elevatecpagroup.com",
-      "website_raw": "https://elevatecpagroup.com",
-      "location": "Boulder Colorado",
-      "contact": {
-        "name": "RICK WILKENS, CPA",
-        "role": "Founder & Owner",
-        "email": "rick@elevatecpagroup.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "Elevate CPA Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "rick@elevatecpagroup.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAM0cyUBI_GPqEqlPGqYkMNim2apcHls2vc/",
-      "company_linkedin": "https://www.linkedin.com/company/70980090",
-      "employee_count": "4",
-      "company_size": "2-10 employees",
-      "industry": "Investment Management",
-      "description": "Is your financial planning firm hungry for growth? Do you have big goals but feel stuck? Are you unsure of where to go from here? \n\nMeet Elevate CPA Group. We are CPAs, advisors, and accountants who focus solely on the financial services industry. As your strategic growth partner",
-      "dedupe_key": "elevatecpagroup.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "1M-5M",
-      "follower_count": "120"
-    },
-    {
-      "name": "Mulberry Health",
-      "practice_type": "medical_clinic",
-      "domain": "mulberrymedical.net",
-      "website_raw": "https://mulberrymedical.net",
-      "location": "Tempe Arizona",
-      "contact": {
-        "name": "Christy Furtado",
-        "role": "Director of Operations",
-        "email": "hello@ease.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "Mulberry Health's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "hello@ease.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAA71eR4BgT6cgIzbYEB5otYdIr0F4rCFKZo/",
-      "company_linkedin": "https://www.linkedin.com/company/107525553",
-      "employee_count": "10",
-      "company_size": "11-50 employees",
-      "industry": "Medical Practices",
-      "description": "Mulberry Health is a home based (mobile) physician-led medical group based in Arizona. We provide in home primary care and transitional care services to seniors in private homes, assisted living, and memory care communities. We also provide Men's Health, Women's Health, Medical W",
-      "dedupe_key": "mulberrymedical.net",
-      "queue_date": "2026-06-14",
-      "founded": "2025",
-      "annual_revenue": "1M-5M",
-      "follower_count": "325"
-    },
-    {
-      "name": "Scottsdale Chiropractic Wellness Center",
-      "practice_type": "chiropractic",
-      "domain": "chiropractorinscottsdale.com",
-      "website_raw": "https://chiropractorinscottsdale.com",
-      "location": "Scottsdale Arizona",
-      "contact": {
-        "name": "Mike Halsam D.C.",
-        "role": "Owner",
-        "email": "azbackdoc@aol.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "Scottsdale Chiropractic Wellness Center's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "azbackdoc@aol.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAACouobgBgOfuSAo1MdnETGs87OAb3Ag0A3s/",
-      "company_linkedin": "https://www.linkedin.com/company/16129425",
-      "employee_count": "3",
-      "company_size": "2-10 employees",
-      "industry": "Wellness and Fitness Services",
-      "description": "",
-      "dedupe_key": "chiropractorinscottsdale.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "0-500K",
-      "follower_count": "1"
-    },
-    {
-      "name": "First Choice Business Brokers - Acquire. Maximize. Exit.TM Team",
-      "practice_type": "financial",
-      "domain": "broker.doctor",
-      "website_raw": "https://broker.doctor",
-      "location": "Phoenix Arizona",
-      "contact": {
-        "name": "Dr. Leilani Felix-Acosta, DBA, MBA",
-        "role": "Owner/Business Broker",
-        "email": "brokerdoctor@fcbb.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "First Choice Business Brokers - Acquire. Maximize. Exit.TM Team's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "brokerdoctor@fcbb.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAABPQzusBE7TkMVSAH-DpFi9PKEwptApo5dM/",
-      "company_linkedin": "https://www.linkedin.com/company/68005379",
-      "employee_count": "3",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "First Choice Business Brokers assists small to medium size business owners in valuing their business and finding buyers; acting as a professional intermediary throughout the entire selling process.\n\nTo build a team of specialists business brokers that assist entrepreneurial minde",
-      "dedupe_key": "broker.doctor",
-      "queue_date": "2026-06-14",
-      "founded": "2019",
-      "annual_revenue": "1M-5M",
-      "follower_count": "685"
-    },
-    {
-      "name": "National Automotive Programs formerly NAPA Insurance Center",
-      "practice_type": "insurance",
-      "domain": "napainsurancecenter.com",
-      "website_raw": "https://napainsurancecenter.com",
-      "location": "Austin",
-      "contact": {
-        "name": "Daniel Pierro",
-        "role": "President",
-        "email": "info@napainsctr.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "National Automotive Programs formerly NAPA Insurance Center's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@napainsctr.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAGJd60BTtit78fp7xBxvuJNAglBxZ-iobU/",
-      "company_linkedin": "https://www.linkedin.com/company/40676580",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Insurance",
-      "description": "Providing the best of products and people to the NAPA Family nationally.",
-      "dedupe_key": "napainsurancecenter.com",
-      "queue_date": "2026-06-14",
-      "founded": "1988",
-      "annual_revenue": "1M-5M",
-      "follower_count": "54"
-    },
-    {
-      "name": "Montgomery & Associates Insurance & Financial Services",
-      "practice_type": "financial",
-      "domain": "montgomeryassociatesins.com",
-      "website_raw": "https://montgomeryassociatesins.com",
-      "location": "Brentwood Tennessee",
-      "contact": {
-        "name": "Will Montgomery",
-        "role": "CEO | Founder",
-        "email": "wmontgomery@montgomeryassociatesins.com"
-      },
-      "weakness_score": 44,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        },
-        {
-          "id": "builder",
-          "label": "Built on WordPress",
-          "confidence": "low",
-          "evidence_str": "The site is built on WordPress."
-        }
-      ],
-      "draft_observation": "Montgomery & Associates Insurance & Financial Services's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "wmontgomery@montgomeryassociatesins.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAADsq7kBdUS647YYCRYLUqG5TSoxAYTq9Ds/",
-      "company_linkedin": "https://www.linkedin.com/company/12903858",
-      "employee_count": "10",
-      "company_size": "11-50 employees",
-      "industry": "Insurance",
-      "description": "Our company is a local multi-lined insurance and financial firm. Our team works with individuals and companies to provide them with risk-management solutions.\n\nAt Montgomery & Associates Insurance Agency, we offer every type of insurance coverage you could need, so every aspect o",
-      "dedupe_key": "montgomeryassociatesins.com",
-      "queue_date": "2026-06-14",
-      "founded": "2010",
-      "annual_revenue": "5M-10M",
-      "follower_count": "133"
-    },
-    {
-      "name": "Accelerated, LLC",
+      "name": "New Home National Title",
       "practice_type": "mental_health",
-      "domain": "accelcg.com",
-      "website_raw": "https://accelcg.com",
-      "location": "Scottsdale Arizona",
-      "contact": {
-        "name": "John Iorillo",
-        "role": "Managing Partner",
-        "email": "heather@accelcg.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Accelerated, LLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "heather@accelcg.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAACDMyIBn6dqAwWzH5HNSHrFsZbhFzWw3eg/",
-      "company_linkedin": "https://www.linkedin.com/company/3495919",
-      "employee_count": "4",
-      "company_size": "2-10 employees",
-      "industry": "Insurance",
-      "description": "Accelerated is a business consulting firm and wholesale insurance agency helping retail brokers save their clients from the healthcare status quo by offering a supplemental benefits program that can increase take-home pay, expand access to care, and lower reliance on your group h",
-      "dedupe_key": "accelcg.com",
-      "queue_date": "2026-06-14",
-      "founded": "2007",
-      "annual_revenue": "1M-5M",
-      "follower_count": "60"
-    },
-    {
-      "name": "Vision401K",
-      "practice_type": "optometry",
-      "domain": "vision401k.com",
-      "website_raw": "https://vision401k.com",
-      "location": "Brentwood Tennessee",
-      "contact": {
-        "name": "Bill Franca",
-        "role": "Managing Partner",
-        "email": "info@vision401k.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Vision401K's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@vision401k.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAFF0qgBdbx31TsDhKNHYmPcPuyprBoY_Lc/",
-      "company_linkedin": "https://www.linkedin.com/company/11753243",
-      "employee_count": "4",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "At Vision401k our expertise and hands on approach allows Plan Sponsors to reduce the time they spend on their Company's retirement plan. Whether it is benchmarking your plan, answering participant questions or reviewing plan options, we’re here as your plan expert. \n\nOur goal is",
-      "dedupe_key": "vision401k.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "1M-5M",
-      "follower_count": "52"
-    },
-    {
-      "name": "Schadel Financial Group",
-      "practice_type": "financial",
-      "domain": "schadelfg.com",
-      "website_raw": "https://schadelfg.com",
-      "location": "Brentwood Tennessee",
-      "contact": {
-        "name": "David Schadel, CFP®, CRPC®",
-        "role": "President and Financial Advisor",
-        "email": "david@schadelfg.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Schadel Financial Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "david@schadelfg.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAU6zwIBsDWt0oYcj6Ybz56oChsLzzVqsrM/",
-      "company_linkedin": "https://www.linkedin.com/company/100345356",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "Securities and Advisory services offered through LPL Financial, a registered investment advisor. Member SIPC (sipc.org).\n\nThe financial professionals associated with Schadel Financial Group may discuss and/or transact business only with residents of the states in which they are p",
-      "dedupe_key": "schadelfg.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "1M-5M",
-      "follower_count": "800"
-    },
-    {
-      "name": "TMG Wealth Advisors, Inc.",
-      "practice_type": "financial",
-      "domain": "tmgwealth.net",
-      "website_raw": "https://tmgwealth.net",
-      "location": "Beaverton OR",
-      "contact": {
-        "name": "Kurt Morgan",
-        "role": "President",
-        "email": "kurt@tmgwealth.net"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "TMG Wealth Advisors, Inc.'s site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "kurt@tmgwealth.net",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAbXFOcBHImTi_AffPYcYqS4tvkkNdXEqCg/",
-      "company_linkedin": "https://www.linkedin.com/company/20354169",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "TMG Wealth Advisors is a comprehensive financial services & planning firm committed to helping individuals and families improve their long-term success in life. \n\nWe operate with the premise of 'Connecting Values to Goals'. Using a Values-Based Financial Planning methodology, we",
-      "dedupe_key": "tmgwealth.net",
-      "queue_date": "2026-06-14",
-      "founded": "2002",
-      "annual_revenue": "1M-5M",
-      "follower_count": "368"
-    },
-    {
-      "name": "Westgate Financial Group",
-      "practice_type": "financial",
-      "domain": "westgatefinancialgroup.com",
-      "website_raw": "https://westgatefinancialgroup.com",
-      "location": "Franklin Tennessee",
-      "contact": {
-        "name": "Jonathan Winkler, CIMA®",
-        "role": "Managing Partner / Financial Advisor",
-        "email": "info@westgatefg.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Westgate Financial Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@westgatefg.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAnSZjwBj0A052Gue67nfxt9_cjwZ58F3Ts/",
-      "company_linkedin": "https://www.linkedin.com/company/109852271",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "At Westgate Financial Group, our mission is to empower our clients to work toward achieving long-term financial success by providing professional guidance and support throughout their financial journey. We recognize that individuals and families strive to create a better future f",
-      "dedupe_key": "westgatefinancialgroup.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "1M-5M",
-      "follower_count": "15"
-    },
-    {
-      "name": "Debits & Credits Bookkeeping, LLC",
-      "practice_type": "financial",
-      "domain": "debitscreditsbookkeeping.com",
-      "website_raw": "https://debitscreditsbookkeeping.com",
-      "location": "Peoria AZ",
-      "contact": {
-        "name": "Debbie Willett",
-        "role": "Business Owner",
-        "email": "info@debitscreditsbookkeeping.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
-        {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Debits & Credits Bookkeeping, LLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "info@debitscreditsbookkeeping.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAABK1jX4BSbl8rx4tsF2XNhgapb85a2eUyUY/",
-      "company_linkedin": "https://www.linkedin.com/company/19142141",
-      "employee_count": "8",
-      "company_size": "2-10 employees",
-      "industry": "Accounting",
-      "description": "With today’s changing business environment, having professional help can benefit your business in more ways than one. Our team can provide you with tailored services designed to cover your business’s unique needs.",
-      "dedupe_key": "debitscreditsbookkeeping.com",
-      "queue_date": "2026-06-14",
-      "founded": "2014",
-      "annual_revenue": "500K-1M",
-      "follower_count": "30"
-    },
-    {
-      "name": "Irving Planning & Investments, Ltd.",
-      "practice_type": "financial",
-      "domain": "irvingplanning.com",
-      "website_raw": "https://irvingplanning.com",
+      "domain": "newhomenationaltitle.com",
+      "website_raw": "https://newhomenationaltitle.com",
       "location": "Centennial Colorado",
       "contact": {
-        "name": "Jason Irving, ChFC®",
-        "role": "President & Financial Advisor",
-        "email": "jason@irvingplanning.com"
+        "name": "Rich Simon",
+        "role": "President",
+        "email": ""
       },
-      "weakness_score": 33,
-      "site_high_count": 1,
+      "weakness_score": 100,
+      "site_high_count": 2,
       "evidence": [
         {
           "id": "no_ssl",
           "label": "No HTTPS / insecure",
           "confidence": "high",
           "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~4 words of content and 0 links — barely more than a placeholder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
         }
       ],
-      "draft_observation": "Irving Planning & Investments, Ltd.'s site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "draft_observation": "New Home National Title's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "jason@irvingplanning.com",
+      "email_verified": "no_email",
+      "verified_email": "",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAA82ZSgB6jRkHFSqyfzDZnPzbba7hEyHIvQ/",
-      "company_linkedin": "https://www.linkedin.com/company/63487500",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Financial Services",
-      "description": "Irving Planning & Investments, Ltd. is a multi-generational, family-run financial firm. We offer over five decades of combined financial services experience. Part of our family legacy is the commitment to building lasting relationships with our clients and their children. \n\nEmpha",
-      "dedupe_key": "irvingplanning.com",
-      "queue_date": "2026-06-14",
-      "founded": "1995",
-      "annual_revenue": "1M-5M",
-      "follower_count": "20"
+      "person_linkedin": "https://www.linkedin.com/in/ACwAABYsg7MBW-8XbbqKHeYq1oAVkt0fsN-aSFg/",
+      "company_linkedin": "https://www.linkedin.com/company/40959706",
+      "employee_count": "3",
+      "company_size": "11-50 employees",
+      "industry": "Real Estate",
+      "description": "Buying, selling or refinancing a home or business is a monumental endeavor. New Home Title will provide the professional and courteous service you deserve during this complex transaction. Timely preparation of title documents. Award-winning customer service. Competitive pricing.",
+      "founded": "2004",
+      "annual_revenue": "5M-10M",
+      "follower_count": "223",
+      "dedupe_key": "newhomenationaltitle.com",
+      "queue_date": "2026-06-22"
     },
     {
-      "name": "Global Strategic NextGen OCIO",
-      "practice_type": "practice",
-      "domain": "gsisus.com",
-      "website_raw": "https://gsisus.com",
-      "location": "Scottsdale AZ",
+      "name": "Moriarity Agency",
+      "practice_type": "insurance",
+      "domain": "moriarityagency.net",
+      "website_raw": "https://moriarityagency.net",
+      "location": "Centennial Colorado",
       "contact": {
-        "name": "Curt Thompson",
-        "role": "Managing Partner",
-        "email": "cthompson@gsisus.com"
+        "name": "Matthew Moriarity",
+        "role": "President - Agency Owner",
+        "email": "matt@moriarityagency.net"
       },
-      "weakness_score": 33,
-      "site_high_count": 1,
+      "weakness_score": 100,
+      "site_high_count": 2,
       "evidence": [
         {
           "id": "no_ssl",
           "label": "No HTTPS / insecure",
           "confidence": "high",
           "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “© 2019 Moriarity Agency” — 7 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on GoDaddy Website Builder",
+          "confidence": "low",
+          "evidence_str": "The site is built on GoDaddy Website Builder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
         }
       ],
-      "draft_observation": "Global Strategic NextGen OCIO's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "draft_observation": "Moriarity Agency's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
       "email_verified": "mx_ok",
-      "verified_email": "cthompson@gsisus.com",
+      "verified_email": "matt@moriarityagency.net",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAHMvxwBEHDvQgl8_k_mrFqvy4rESR86oIE/",
-      "company_linkedin": "https://www.linkedin.com/company/11376544",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAGDB7EBTgLQys2i8GuPHNqa_6uGH9R_cF8/",
+      "company_linkedin": "https://www.linkedin.com/company/22339240",
       "employee_count": "6",
       "company_size": "2-10 employees",
-      "industry": "Investment Management",
-      "description": "NextGen Outsourced Chief Investment Officer (OCIO)\n\nGlobal Strategic Investment Solutions (GSIS) is an Outsourced Chief Investment Officer firm dedicated to a globally diversified portfolio approach to investing.\n\nThe investment community, supported by the media, is set up to enc",
-      "dedupe_key": "gsisus.com",
-      "queue_date": "2026-06-14",
-      "founded": "2015",
+      "industry": "Insurance",
+      "description": "Colorado Insurance Company looking to partner with and properly protect current and future assets of our client base. \n\nWe also help promote and refer our business partners.",
+      "founded": "1983",
       "annual_revenue": "1M-5M",
-      "follower_count": "378"
+      "follower_count": "10",
+      "dedupe_key": "moriarityagency.net",
+      "queue_date": "2026-06-22"
     },
     {
-      "name": "Kramer & Golden Public Accounting Group",
+      "name": "Seamless Capital LP",
       "practice_type": "financial",
-      "domain": "kramergoldencpa.com",
-      "website_raw": "https://kramergoldencpa.com",
-      "location": "Phoenix Arizona",
+      "domain": "seamlesslp.com",
+      "website_raw": "https://seamlesslp.com",
+      "location": "Austin Texas",
       "contact": {
-        "name": "Jessica Golden, CPA",
-        "role": "Managing Partner",
-        "email": "jgolden@kramergoldencpa.com"
+        "name": "Joe Warnock",
+        "role": "CEO & Founder",
+        "email": "jwarnock@seamlesslp.com"
       },
-      "weakness_score": 33,
-      "site_high_count": 1,
+      "weakness_score": 100,
+      "site_high_count": 2,
       "evidence": [
         {
           "id": "no_ssl",
           "label": "No HTTPS / insecure",
           "confidence": "high",
           "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Kramer & Golden Public Accounting Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "jgolden@kramergoldencpa.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAxlkfcBQAlFk6oQ9s4bjnpECmlc4SwtXgY/",
-      "company_linkedin": "https://www.linkedin.com/company/107787571",
-      "employee_count": "2",
-      "company_size": "2-10 employees",
-      "industry": "Accounting",
-      "description": "We at Kramer & Golden Public Accounting Group, provide a wide range of tax and financial accounting services. Our team is both talented and experienced and will take a personal approach to meeting your needs. Our goal is to help our clients maintain individual and professional fi",
-      "dedupe_key": "kramergoldencpa.com",
-      "queue_date": "2026-06-14",
-      "annual_revenue": "500K-1M",
-      "follower_count": "4"
-    },
-    {
-      "name": "Charles Andrew CPA",
-      "practice_type": "financial",
-      "domain": "charlesandrewcpa.com",
-      "website_raw": "https://charlesandrewcpa.com",
-      "location": "Glendale",
-      "contact": {
-        "name": "Charles Andrew, CPA",
-        "role": "Owner",
-        "email": "help@countingworkspro.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
+        },
         {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
           "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
-        }
-      ],
-      "draft_observation": "Charles Andrew CPA's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
-      "observation_cited_signal": "no_ssl",
-      "observation_source": "fallback",
-      "observation_lang": "en",
-      "email_verified": "mx_ok",
-      "verified_email": "help@countingworkspro.com",
-      "source": "SalesNav/Clay",
-      "domain_provisional": false,
-      "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAZn3RoBukXp6ClKoOLViHVocmO2bVfGY_g/",
-      "company_linkedin": "https://www.linkedin.com/company/2512130",
-      "employee_count": "2",
-      "company_size": "Self-employed",
-      "industry": "Accounting",
-      "description": "Provides services to small businesses, such as consulting, accounting, business planning, and tax preparation.   Provides tax planning and tax preparation services to individuals.  Services are personalized to meet the needs of a variety of small businesses and diverse individual",
-      "dedupe_key": "charlesandrewcpa.com",
-      "queue_date": "2026-06-14",
-      "founded": "1988",
-      "annual_revenue": "500K-1M",
-      "follower_count": "24"
-    },
-    {
-      "name": "Larson Financial Advisors",
-      "practice_type": "financial",
-      "domain": "larsonadvisors.com",
-      "website_raw": "https://larsonadvisors.com",
-      "location": "Cedar Park Texas",
-      "contact": {
-        "name": "Craig Larson",
-        "role": "President",
-        "email": "operations@larsonadvisors.com"
-      },
-      "weakness_score": 33,
-      "site_high_count": 1,
-      "evidence": [
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
         {
-          "id": "no_ssl",
-          "label": "No HTTPS / insecure",
-          "confidence": "high",
-          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~11 words of content and 1 links — barely more than a placeholder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
         }
       ],
-      "draft_observation": "Larson Financial Advisors's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "draft_observation": "Seamless Capital LP's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
       "observation_cited_signal": "no_ssl",
       "observation_source": "fallback",
       "observation_lang": "en",
       "email_verified": "mx_ok",
-      "verified_email": "operations@larsonadvisors.com",
+      "verified_email": "jwarnock@seamlesslp.com",
       "source": "SalesNav/Clay",
       "domain_provisional": false,
       "hs_company_id": "",
-      "person_linkedin": "https://www.linkedin.com/in/ACwAAAC0WFcBEQQfhYcfoDgjVmpNtazOKqZJ2wk/",
-      "company_linkedin": "https://www.linkedin.com/company/1458137",
-      "employee_count": "8",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAFJGgABvvBLZ8BYGn7eYHWUX0KziAqZ9tY/",
+      "company_linkedin": "https://www.linkedin.com/company/64666944",
+      "employee_count": "4",
       "company_size": "2-10 employees",
       "industry": "Financial Services",
-      "description": "Larson Financial Advisors is a fiduciary firm specializing in wealth management for professionals, business owners and retirees.",
-      "dedupe_key": "larsonadvisors.com",
-      "queue_date": "2026-06-14",
-      "founded": "1996",
+      "description": "Seamless Capital invests in high quality assets and growth-stage companies where we can drive tangible value.",
+      "founded": "2006",
       "annual_revenue": "1M-5M",
-      "follower_count": "36"
+      "follower_count": "393",
+      "dedupe_key": "seamlesslp.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Cost Advisors, Inc.",
+      "practice_type": "financial",
+      "domain": "costadvisors.com",
+      "website_raw": "https://costadvisors.com",
+      "location": "Beaverton OR",
+      "contact": {
+        "name": "Bill Douglas CPA CIA CFE CFF",
+        "role": "President",
+        "email": "bill@costadvisors.com"
+      },
+      "weakness_score": 89,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Cost Advisors, Inc.'s site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "bill@costadvisors.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAADC5b4BH0AIgMboz6Nb_WkH99A16vrilnk/",
+      "company_linkedin": "https://www.linkedin.com/company/322931",
+      "employee_count": "8",
+      "company_size": "2-10 employees",
+      "industry": "Accounting",
+      "description": "We are a CPA firm specializing financial investigation and forensics. Since 1999, we have been helping a diverse range of public and private companies manage risk, prevent, detect and investigate fraud and improve their business processes and controls. We also assist attorneys wi",
+      "founded": "1999",
+      "annual_revenue": "500K-1M",
+      "follower_count": "53",
+      "dedupe_key": "costadvisors.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Front Range Recruiting",
+      "practice_type": "staffing",
+      "domain": "httpforever.com",
+      "website_raw": "http://httpforever.com",
+      "location": "Phoenix AZ",
+      "contact": {
+        "name": "",
+        "role": "Director of Operations",
+        "email": ""
+      },
+      "weakness_score": 78,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Front Range Recruiting's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "LinkedIn Search",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "",
+      "company_linkedin": "",
+      "employee_count": "",
+      "company_size": "",
+      "industry": "",
+      "description": "",
+      "founded": "",
+      "annual_revenue": "",
+      "follower_count": "",
+      "dedupe_key": "httpforever.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "The Dynasty Agency",
+      "practice_type": "financial",
+      "domain": "dynastyagents.com",
+      "website_raw": "https://dynastyagents.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Jon Deloney",
+        "role": "Agency Owner",
+        "email": "jdeloney@dynastyagents.com"
+      },
+      "weakness_score": 78,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "The Dynasty Agency's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "jdeloney@dynastyagents.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAABJUsdEBMpvrmTdivfL8-pHpAAxIsuROD60/",
+      "company_linkedin": "https://www.linkedin.com/company/115744281",
+      "employee_count": "2",
+      "company_size": "11-50 employees",
+      "industry": "Financial Services",
+      "description": "",
+      "founded": "",
+      "annual_revenue": "",
+      "follower_count": "1",
+      "dedupe_key": "dynastyagents.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Aaxia Chemical Insurance Services",
+      "practice_type": "insurance",
+      "domain": "chemicalinsurance.com",
+      "website_raw": "https://chemicalinsurance.com",
+      "location": "Mesa Arizona",
+      "contact": {
+        "name": "Larry Knight",
+        "role": "President",
+        "email": "larryk@chemicalinsurance.com"
+      },
+      "weakness_score": 78,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Aaxia Chemical Insurance Services's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "larryk@chemicalinsurance.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAALoG0MBX0s3haPKM_hn629XZFlc_zXXeEY/",
+      "company_linkedin": "https://www.linkedin.com/company/102011230",
+      "employee_count": "4",
+      "company_size": "11-50 employees",
+      "industry": "Insurance",
+      "description": "Protecting the chemical industry.  It's what we do.  For roughly a quarter of a century, Aaxia Chemical Insurance Services has been providing specialized insurance and risk management services to chemical distributors and chemical manufacturers.  When chemical companies need more",
+      "founded": "2000",
+      "annual_revenue": "5M-10M",
+      "follower_count": "314",
+      "dedupe_key": "chemicalinsurance.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "eJD Search",
+      "practice_type": "law",
+      "domain": "ejdsearch.com",
+      "website_raw": "https://ejdsearch.com",
+      "location": "Denver Colorado",
+      "contact": {
+        "name": "Elizabeth J. Dietrich",
+        "role": "President",
+        "email": "libbyjd@ejdsearch.com"
+      },
+      "weakness_score": 78,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "eJD Search's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "libbyjd@ejdsearch.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAACsq3gB8h4vKdIzw8vlAaVmldly7rZ2mU0/",
+      "company_linkedin": "https://www.linkedin.com/company/202253",
+      "employee_count": "4",
+      "company_size": "Self-employed",
+      "industry": "Legal Services",
+      "description": "eJD Search is a sophisticated legal recruiting company owned by a Denver attorney and experienced legal recruiter.   eJD Search's focus is permanent placement of attorneys in top law firms and corporations in Colorado.   We emphasize integrity, responsiveness, discretion and dedi",
+      "founded": "",
+      "annual_revenue": "1M-5M",
+      "follower_count": "43",
+      "dedupe_key": "ejdsearch.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "The Kendra Group LLC",
+      "practice_type": "financial",
+      "domain": "thekendragroup.accountant",
+      "website_raw": "https://thekendragroup.accountant",
+      "location": "Seattle Washington",
+      "contact": {
+        "name": "K. Lee Gebb",
+        "role": "Founder - CEO",
+        "email": "kendra@thekendragroup.accountant"
+      },
+      "weakness_score": 78,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "The Kendra Group LLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "kendra@thekendragroup.accountant",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAADm3q0sBsMZck497mXM_zOOe-zschACgzYA/",
+      "company_linkedin": "https://www.linkedin.com/company/81903694",
+      "employee_count": "2",
+      "company_size": "2-10 employees",
+      "industry": "Accounting",
+      "description": "We offer Royalty Accounting for the Entertainment, Music Industries.  \n Influencers as a growing set are grappling with how to best set up a business and are a #1 focus for us.  We will set up your business and work with you on every step to financial success.  We offer bookkeepi",
+      "founded": "1995",
+      "annual_revenue": "500K-1M",
+      "follower_count": "32",
+      "dedupe_key": "thekendragroup.accountant",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "The Kingly Group",
+      "practice_type": "real_estate",
+      "domain": "thekinglygroup.com",
+      "website_raw": "https://thekinglygroup.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Ronny Philip",
+        "role": "CEO and Founder",
+        "email": "ronny@thekinglygroup.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 2,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        }
+      ],
+      "draft_observation": "The Kingly Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "ronny@thekinglygroup.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAA99Nf0B4UEQr--Y_jq-OiszsWZvFOpdmYE/",
+      "company_linkedin": "https://www.linkedin.com/company/22349335",
+      "employee_count": "4",
+      "company_size": "2-10 employees",
+      "industry": "Real Estate",
+      "description": "The Kingly Group is a real estate private equity firm focused on acquiring value-add multifamily properties throughout the Sun Belt region. As a national firm with a growing portfolio throughout the US, Kingly leverages a diverse investment approach through direct acquisitions, j",
+      "founded": "2017",
+      "annual_revenue": "500K-1M",
+      "follower_count": "1204",
+      "dedupe_key": "thekinglygroup.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Claritas Health Group",
+      "practice_type": "medical_clinic",
+      "domain": "claritashealthgroup.com",
+      "website_raw": "https://claritashealthgroup.com",
+      "location": "Dallas TX",
+      "contact": {
+        "name": "Megan Holmgren PT, DPT",
+        "role": "Company Owner",
+        "email": "megan.holmgren@claritashealthgroup.com"
+      },
+      "weakness_score": 89,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~79 words of content and 11 links — barely more than a placeholder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Claritas Health Group's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "megan.holmgren@claritashealthgroup.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAABqqJGkB3LEYj_S0co_A2ZViE4dsOU04BFQ/",
+      "company_linkedin": "https://www.linkedin.com/company/104453906",
+      "employee_count": "3",
+      "company_size": "2-10 employees",
+      "industry": "Legal Services",
+      "description": "Claritas Health Group is a premier legal medical consulting firm specializing in comprehensive medical record reviews for law firms and insurance companies. Our expert team is dedicated to providing precise and actionable insights that support your legal and insurance needs.\n\nOur",
+      "founded": "",
+      "annual_revenue": "500K-1M",
+      "follower_count": "88",
+      "dedupe_key": "claritashealthgroup.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Peggy S. Edge, CPA, LLC",
+      "practice_type": "medical_clinic",
+      "domain": "ebpaudits.com",
+      "website_raw": "https://ebpaudits.com",
+      "location": "Austin Texas",
+      "contact": {
+        "name": "Peggy S. Edge, CPA",
+        "role": "Owner",
+        "email": "peggyedge@ebpaudits.com"
+      },
+      "weakness_score": 89,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “&copy; 2009 - 2021” — 5 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Peggy S. Edge, CPA, LLC's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "peggyedge@ebpaudits.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAJYewABYfJ09NgXY99PwjmUPvciTQ6wY28/",
+      "company_linkedin": "https://www.linkedin.com/company/287105",
+      "employee_count": "3",
+      "company_size": "Self-employed",
+      "industry": "Accounting",
+      "description": "Peggy S. Edge, CPA, LLC is a specialty niche firm offering exclusively 100% employee benefit plan audit services.\n\nAuditing employee benefit plans is an industry-specific service that requires specialized experience and knowledge. With changing rules and regulations from the Depa",
+      "founded": "2009",
+      "annual_revenue": "1M-5M",
+      "follower_count": "20",
+      "dedupe_key": "ebpaudits.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "The Mortgage Advantage",
+      "practice_type": "financial",
+      "domain": "themortgageadvantage.com",
+      "website_raw": "https://themortgageadvantage.com",
+      "location": "Tempe Arizona",
+      "contact": {
+        "name": "Diane Gerdes",
+        "role": "Owner",
+        "email": "info@galaxylg.com"
+      },
+      "weakness_score": 78,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "old_wordpress",
+          "label": "Outdated WordPress",
+          "confidence": "med",
+          "evidence_str": "The site runs WordPress 5.6 (current is 6.x) — an out-of-date, unmaintained CMS with known security holes."
+        }
+      ],
+      "draft_observation": "The Mortgage Advantage's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@galaxylg.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAL4mDABGMQkUCasD9TgxSGxIyYg7rXEukY/",
+      "company_linkedin": "https://www.linkedin.com/company/22538331",
+      "employee_count": "3",
+      "company_size": "11-50 employees",
+      "industry": "Financial Services",
+      "description": "TheMortgageAdvantage.com PLLC is a residential mortgage lender.  We assist families and individuals to achieve their homeownership dreams by evaluating their specific lending needs.\n\nOur loan officers are educated in today’s ever-changing mortgage environment.  We counsel borrowe",
+      "founded": "1995",
+      "annual_revenue": "1M-5M",
+      "follower_count": "6",
+      "dedupe_key": "themortgageadvantage.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Marquez Consultants",
+      "practice_type": "medical_clinic",
+      "domain": "billchiro.com",
+      "website_raw": "https://billchiro.com",
+      "location": "Seattle Washington",
+      "contact": {
+        "name": "Ally Marquez",
+        "role": "Managing Partner",
+        "email": "info@marquezconsultants.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on Squarespace",
+          "confidence": "low",
+          "evidence_str": "The site is built on Squarespace."
+        }
+      ],
+      "draft_observation": "Marquez Consultants's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@marquezconsultants.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAECyRy8BaalVFXLvWfmj7DLsl-OAJD4cZ2g/",
+      "company_linkedin": "https://www.linkedin.com/company/31448134",
+      "employee_count": "4",
+      "company_size": "2-10 employees",
+      "industry": "Business Consulting and Services",
+      "description": "Our mission is to empower our employees and organization to continuously improve and innovate to meet our clients’ needs. Our goal is to help medical offices improve and grow their business by creating tailored solutions to meet their profit and organizational objectives. We offe",
+      "founded": "",
+      "annual_revenue": "500K-1M",
+      "follower_count": "32",
+      "dedupe_key": "billchiro.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Burton Hill Capital",
+      "practice_type": "practice",
+      "domain": "burtonhillcapital.com",
+      "website_raw": "https://burtonhillcapital.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Robert Ryan",
+        "role": "Founder, Managing Director",
+        "email": "robert@burtonhillcapital.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “©2021 Burton Hill Capital - All rights reserve” — 5 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Burton Hill Capital's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "robert@burtonhillcapital.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAq3pfIBg4I2F6L0zD7LKsd0ZEUM5RtvHTI/",
+      "company_linkedin": "https://www.linkedin.com/company/15230174",
+      "employee_count": "3",
+      "company_size": "2-10 employees",
+      "industry": "Investment Management",
+      "description": "Burton Hill Capital is a privately held investment firm seeking to acquire and operate one lower middle market company. We offer a rare combination for small business owners: an opportunity for liquidity and the confidence to know their business and employees will always be put f",
+      "founded": "2016",
+      "annual_revenue": "1M-5M",
+      "follower_count": "35",
+      "dedupe_key": "burtonhillcapital.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "COMPLETE TREATMENT LLC",
+      "practice_type": "integrative_health",
+      "domain": "completetreatmentdfw.com",
+      "website_raw": "https://completetreatmentdfw.com",
+      "location": "Dallas Texas",
+      "contact": {
+        "name": "Mashi Epting, CTRS, MHA, CCMA, CLPC",
+        "role": "Chief Executive Officer",
+        "email": "mashi@completetreatmentdfw.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "COMPLETE TREATMENT LLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "mashi@completetreatmentdfw.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAADEMRlABeVW-izhRR0kt1Y9xY0cnFpO6Cp8/",
+      "company_linkedin": "https://www.linkedin.com/company/33180558",
+      "employee_count": "2",
+      "company_size": "11-50 employees",
+      "industry": "Wellness and Fitness Services",
+      "description": "Complete Treatment, LLC. is dedicated to providing holistic services to individuals through specialized therapies. We service all ages and various special needs.  We contract with agencies/families and work closely with families to provide services that helps improves the quality",
+      "founded": "2017",
+      "annual_revenue": "1M-5M",
+      "follower_count": "13",
+      "dedupe_key": "completetreatmentdfw.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Debbie Taussig Law, LLC",
+      "practice_type": "law",
+      "domain": "taussiglaw.com",
+      "website_raw": "https://taussiglaw.com",
+      "location": "Boulder Colorado",
+      "contact": {
+        "name": "Debbie Taussig",
+        "role": "Owner & Founding Attorney",
+        "email": "debbie@taussiglaw.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “copyright \">” — 3 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "Debbie Taussig Law, LLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "debbie@taussiglaw.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAFvzekBldxTdEd5l7cePPJtS-1z5p_c1lw/",
+      "company_linkedin": "https://www.linkedin.com/company/69108298",
+      "employee_count": "3",
+      "company_size": "2-10 employees",
+      "industry": "Legal Services",
+      "description": "Debbie Taussig Law is a Boulder-based personal injury law firm representing individuals and families across Boulder, the Denver Metro area, and throughout Colorado.\n\nWhen an accident results in serious or catastrophic injury, outcomes matter. Clients turn to Debbie Taussig Law fo",
+      "founded": "2008",
+      "annual_revenue": "1M-5M",
+      "follower_count": "235",
+      "dedupe_key": "taussiglaw.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Front Range Behavioral Associates",
+      "practice_type": "mental_health",
+      "domain": "frontrangebehavioralassociates.com",
+      "website_raw": "https://frontrangebehavioralassociates.com",
+      "location": "Denver CO",
+      "contact": {
+        "name": "Michelle McDermott",
+        "role": "Executive Director & Founder",
+        "email": "mmcdermott@frontrangebehavioralassociates.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "builder",
+          "label": "Built on Weebly",
+          "confidence": "low",
+          "evidence_str": "The site is built on Weebly."
+        }
+      ],
+      "draft_observation": "Front Range Behavioral Associates's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "mmcdermott@frontrangebehavioralassociates.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAF0Kg8B-7IPhBH-HXKngx6RsTOb5KwFcdA/",
+      "company_linkedin": "https://www.linkedin.com/company/35501858",
+      "employee_count": "10",
+      "company_size": "2-10 employees",
+      "industry": "Mental Health Care",
+      "description": "Our mission at Front Range Behavioral Associates is to deliver evidence-based behavioral therapy services to children and teens with autism spectrum disorder. We strive to help our clients become active, social family members, build friendships, and participate in their community",
+      "founded": "2016",
+      "annual_revenue": "1M-5M",
+      "follower_count": "70",
+      "dedupe_key": "frontrangebehavioralassociates.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Garry L Albert CPA PC",
+      "practice_type": "financial",
+      "domain": "albertcpa.com",
+      "website_raw": "https://albertcpa.com",
+      "location": "Castle Pines Colorado",
+      "contact": {
+        "name": "Garry Albert",
+        "role": "President",
+        "email": "galbert@albertcpa.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~5 words of content and 0 links — barely more than a placeholder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Garry L Albert CPA PC's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "galbert@albertcpa.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAkME3MBkfB7OhjSSvQyOhC9t632MYVt5KM/",
+      "company_linkedin": "https://www.linkedin.com/company/8319527",
+      "employee_count": "6",
+      "company_size": "2-10 employees",
+      "industry": "Accounting",
+      "description": "Garry L Albert CPA PC is an Accounting company located at 7501 Village Square Drive Suite 102, Castle Pines, Colorado, United States.",
+      "founded": "1999",
+      "annual_revenue": "500K-1M",
+      "follower_count": "13",
+      "dedupe_key": "albertcpa.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Dental Faith",
+      "practice_type": "dental",
+      "domain": "dentalfaith.com",
+      "website_raw": "https://dentalfaith.com",
+      "location": "Nashville Tennessee",
+      "contact": {
+        "name": "Dr. Paula Fedler, DDS",
+        "role": "Owner & Dentistry Practitioner",
+        "email": "info@dentalfaith.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "no_booking",
+          "label": "No online booking",
+          "confidence": "med",
+          "evidence_str": "There’s no way to book or request an appointment online — no scheduling tool and no contact form on the homepage."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Dental Faith's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@dentalfaith.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAELUNC0B2r3WfNr7j6DKk-jS_c2iUAJo6Vs/",
+      "company_linkedin": "https://www.linkedin.com/company/94131871",
+      "employee_count": "6",
+      "company_size": "2-10 employees",
+      "industry": "Dentists",
+      "description": "We pride ourselves on being the dental resource for patients who may not feel comfortable elsewhere. No matter your nationality, we take the time to understand your needs and give you an experience you will remember for all the right reasons. That’s why we say ‘Come Experience th",
+      "founded": "2013",
+      "annual_revenue": "500K-1M",
+      "follower_count": "10",
+      "dedupe_key": "dentalfaith.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Chung, Malhas & Mantel, PLLC",
+      "practice_type": "law",
+      "domain": "cmmrlawfirm.com",
+      "website_raw": "https://cmmrlawfirm.com",
+      "location": "Seattle Washington",
+      "contact": {
+        "name": "Dr. Dima N. Malhas Esq.",
+        "role": "Managing Partner",
+        "email": "info@cmmlawfirm.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “&copy;) 2022 |” — 4 years out of date, a sign the site hasn’t been touched since then."
+        },
+        {
+          "id": "builder",
+          "label": "Built on WordPress",
+          "confidence": "low",
+          "evidence_str": "The site is built on WordPress."
+        }
+      ],
+      "draft_observation": "Chung, Malhas & Mantel, PLLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@cmmlawfirm.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAA2wtXgBpqd1gUNc7CVPwzfyp5c6bGxD890/",
+      "company_linkedin": "https://www.linkedin.com/company/3198030",
+      "employee_count": "8",
+      "company_size": "11-50 employees",
+      "industry": "Legal Services",
+      "description": "With today’s technological advances and evolving industries, Chung, Malhas & Mantel, PLLC has been approached with the magnificent opportunity of representing not only American businesses and individuals, but individuals and businesses from overseas seeking to forge strategic all",
+      "founded": "2006",
+      "annual_revenue": "5M-10M",
+      "follower_count": "67",
+      "dedupe_key": "cmmrlawfirm.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Brinkerhoff Revenig & Corrigan PC",
+      "practice_type": "financial",
+      "domain": "brcpa.com",
+      "website_raw": "https://brcpa.com",
+      "location": "DENVER Colorado",
+      "contact": {
+        "name": "Steve Revenig",
+        "role": "Founder/President",
+        "email": "srevenig@brcpa.com"
+      },
+      "weakness_score": 67,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~124 words of content and 8 links — barely more than a placeholder."
+        },
+        {
+          "id": "no_cta",
+          "label": "No clear call-to-action",
+          "confidence": "low",
+          "evidence_str": "The homepage has no clickable phone number, booking link, contact form, or email visible in the page source."
+        }
+      ],
+      "draft_observation": "Brinkerhoff Revenig & Corrigan PC's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "srevenig@brcpa.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAJnxGwBiBGEL8jAL3yy3EF52se5q4KOxVM/",
+      "company_linkedin": "https://www.linkedin.com/company/16098800",
+      "employee_count": "10",
+      "company_size": "11-50 employees",
+      "industry": "Accounting",
+      "description": "Brinkerhoff Revenig & Corrigan is a CPA firm that has developed professional expertise in tax planning and business consultation covering a broad range of industries and financial transactions. We understand that the needs of each individual and business client will be specific a",
+      "founded": "1986",
+      "annual_revenue": "5M-10M",
+      "follower_count": "31",
+      "dedupe_key": "brcpa.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Arizona Frontline Law PLLC",
+      "practice_type": "law",
+      "domain": "arizonafrontline.com",
+      "website_raw": "https://arizonafrontline.com",
+      "location": "Tempe Arizona",
+      "contact": {
+        "name": "Jonathan Garner",
+        "role": "Owner and Attorney",
+        "email": "webmaster@arizonafrontline.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "thin_site",
+          "label": "Very thin homepage",
+          "confidence": "med",
+          "evidence_str": "The homepage has only ~16 words of content and 1 links — barely more than a placeholder."
+        }
+      ],
+      "draft_observation": "Arizona Frontline Law PLLC's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "webmaster@arizonafrontline.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAACWe-YsB-MfkGIgEuhyA8kw8vsnV7pT9H1g/",
+      "company_linkedin": "https://www.linkedin.com/company/108074064",
+      "employee_count": "2",
+      "company_size": "Self-employed",
+      "industry": "Legal Services",
+      "description": "When facing criminal charges you need a dedicated and experienced team on your side. Here at Arizona Frontline Law we utilize our previous experience as prosecutor’s to work in your favor. Every case at our firm receives a tailored defense strategy to receive the best outcome pos",
+      "founded": "",
+      "annual_revenue": "500K-1M",
+      "follower_count": "27",
+      "dedupe_key": "arizonafrontline.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Lincoln Home Loans",
+      "practice_type": "financial",
+      "domain": "lincolnhomeloans.com",
+      "website_raw": "https://lincolnhomeloans.com",
+      "location": "Nashville Tennessee",
+      "contact": {
+        "name": "Josh Malnofski",
+        "role": "President/Owner",
+        "email": "info@lincolnhomeloans.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "old_wordpress",
+          "label": "Outdated WordPress",
+          "confidence": "med",
+          "evidence_str": "The site runs WordPress 5.4.2 (current is 6.x) — an out-of-date, unmaintained CMS with known security holes."
+        }
+      ],
+      "draft_observation": "Lincoln Home Loans's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@lincolnhomeloans.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAC5LjQB_dsTw4bBfBm2BJxisUR8aTMH8Mg/",
+      "company_linkedin": "https://www.linkedin.com/company/11550510",
+      "employee_count": "10",
+      "company_size": "11-50 employees",
+      "industry": "Financial Services",
+      "description": "The Lincoln Home Loans Team is committed to providing clients with the highest quality home loans combined with some of the lowest mortgage rates. Whether you are first time home buyer, purchasing your dream home, refinancing an outstanding loan, or consolidating debt, our highly",
+      "founded": "2011",
+      "annual_revenue": "1M-5M",
+      "follower_count": "84",
+      "dedupe_key": "lincolnhomeloans.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "ProPath Financial",
+      "practice_type": "optometry",
+      "domain": "propathfinancial.com",
+      "website_raw": "https://propathfinancial.com",
+      "location": "Tempe AZ",
+      "contact": {
+        "name": "Thatcher Taylor, CFP ®, MBA",
+        "role": "Owner at ProPath Financial(formerly Taylor Financial)",
+        "email": "thatcher@propathfinancial.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “©2023 Propath Financial. All Rights Reserved.” — 3 years out of date, a sign the site hasn’t been touched since then."
+        }
+      ],
+      "draft_observation": "ProPath Financial's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "thatcher@propathfinancial.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAABOtN1kBuWE6ihfr_4k8tCIwEjN0ziJzjn4/",
+      "company_linkedin": "https://www.linkedin.com/company/76133899",
+      "employee_count": "2",
+      "company_size": "2-10 employees",
+      "industry": "Financial Services",
+      "description": "Financial planning and asset management for the 50+ retirement visionary.\n\nAfter 12 years in the investment industry working at 4 companies, I took the best of them all and created a fee-only financial planning firm. \n\nThis firm is for people that do not have the time, willingnes",
+      "founded": "2019",
+      "annual_revenue": "1M-5M",
+      "follower_count": "38",
+      "dedupe_key": "propathfinancial.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Raaf Investment Advisors",
+      "practice_type": "financial",
+      "domain": "raafinvest.com",
+      "website_raw": "https://raafinvest.com",
+      "location": "Portland OR",
+      "contact": {
+        "name": "John C. Raaf, CFA, CFP®",
+        "role": "Owner",
+        "email": "john@raafinvest.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “&copy; Raaf Investment Advisors 2019, All righ” — 7 years out of date, a sign the site hasn’t been touched since then."
+        }
+      ],
+      "draft_observation": "Raaf Investment Advisors's site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "john@raafinvest.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAEfTZoBfDPE4tIX9rxkZiQOL8zNNhQlE0g/",
+      "company_linkedin": "https://www.linkedin.com/company/1704895",
+      "employee_count": "2",
+      "company_size": "Self-employed",
+      "industry": "Investment Management",
+      "description": "Raaf Investment Advisors, LLC (RIA) is an independent firm based in Portland, OR. We manage investments for individuals and families on a fee-only basis. RIA provides comprehensive financial planning services as part of the investment advisory relationship, or as a separate hourl",
+      "founded": "2010",
+      "annual_revenue": "1M-5M",
+      "follower_count": "12",
+      "dedupe_key": "raafinvest.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Kilgore Engineering, Inc.",
+      "practice_type": "law",
+      "domain": "kilgoreengineering.com",
+      "website_raw": "https://kilgoreengineering.com",
+      "location": "Englewood CO",
+      "contact": {
+        "name": "W. Ronald Kilgore",
+        "role": "President",
+        "email": "colorado@kilgoreengineering.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “COPYRIGHT &copy; 2022” — 4 years out of date, a sign the site hasn’t been touched since then."
+        }
+      ],
+      "draft_observation": "Kilgore Engineering, Inc.'s site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "colorado@kilgoreengineering.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAC2cNUBSTrgk7UQ9Vx4W3Pcbo7lZEVOcto/",
+      "company_linkedin": "https://www.linkedin.com/company/638638",
+      "employee_count": "6",
+      "company_size": "11-50 employees",
+      "industry": "Legal Services",
+      "description": "Kilgore Engineering offers consulting engineering services in the area of electrical failure analysis.  We investigate product failures, fires, electrical failures, and personal injuries.  Our primary markets are the litigation and product manufacturing industries.  We also provi",
+      "founded": "1996",
+      "annual_revenue": "5M-10M",
+      "follower_count": "50",
+      "dedupe_key": "kilgoreengineering.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Clear Creek Insurance & Financial Services, Inc.",
+      "practice_type": "financial",
+      "domain": "clearcreekinsurance.com",
+      "website_raw": "https://clearcreekinsurance.com",
+      "location": "Denver Colorado",
+      "contact": {
+        "name": "John Kidd",
+        "role": "President / CEO",
+        "email": ""
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "old_wordpress",
+          "label": "Outdated WordPress",
+          "confidence": "med",
+          "evidence_str": "The site runs WordPress 4.4.27 (current is 6.x) — an out-of-date, unmaintained CMS with known security holes."
+        }
+      ],
+      "draft_observation": "Clear Creek Insurance & Financial Services, Inc.'s site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "no_email",
+      "verified_email": "",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAEMMeIBpReAgyp-Hkw3abeB3wEyoXZ6vxA/",
+      "company_linkedin": "https://www.linkedin.com/company/28121356",
+      "employee_count": "3",
+      "company_size": "2-10 employees",
+      "industry": "Insurance",
+      "description": "At Clear Creek Insurance and Financial Services, we've been providing our clients with comprehensive risk management insurance solutions, asset management, and retirement strategies since 2003. Our commitment to excellence and our 100% customer satisfaction guarantee means that y",
+      "founded": "2003",
+      "annual_revenue": "1M-5M",
+      "follower_count": "6",
+      "dedupe_key": "clearcreekinsurance.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Kaizen CPA",
+      "practice_type": "financial",
+      "domain": "geriscpa.com",
+      "website_raw": "https://geriscpa.com",
+      "location": "Greenwood Village Colorado",
+      "contact": {
+        "name": "Daniel Ganns",
+        "role": "Managing Partner",
+        "email": "ajensen@geriscpa.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_ssl",
+          "label": "No HTTPS / insecure",
+          "confidence": "high",
+          "evidence_str": "The site does not load over a valid HTTPS connection, so browsers flag it as “Not secure” in the address bar."
+        },
+        {
+          "id": "stale_copyright",
+          "label": "Stale copyright year",
+          "confidence": "med",
+          "evidence_str": "The footer still reads “Copyright Â© 2018 Geris Zebarth, Inc.” — 8 years out of date, a sign the site hasn’t been touched since then."
+        }
+      ],
+      "draft_observation": "Kaizen CPA's site doesn’t load over a secure https connection, so browsers show visitors a “Not secure” warning.",
+      "observation_cited_signal": "no_ssl",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "ajensen@geriscpa.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAtVlL8B2M1xt0ax6dn5sg6S37to1SQb7vA/",
+      "company_linkedin": "https://www.linkedin.com/company/1053607",
+      "employee_count": "6",
+      "company_size": "2-10 employees",
+      "industry": "Accounting",
+      "description": "Certified Public accounting firm in Greenwood Village, Colorado specializing in small business accounting.  We offer services in all areas of accounting and finance for companies and individuals.  In addition to our basic services we also offer extensive consulting geared to help",
+      "founded": "2008",
+      "annual_revenue": "500K-1M",
+      "follower_count": "228",
+      "dedupe_key": "geriscpa.com",
+      "queue_date": "2026-06-22"
+    },
+    {
+      "name": "Smith And Associates, P.C.",
+      "practice_type": "financial",
+      "domain": "smithassociatespc.com",
+      "website_raw": "https://smithassociatespc.com",
+      "location": "Lakewood CO",
+      "contact": {
+        "name": "Diane Smith, CPA",
+        "role": "Managing Partner",
+        "email": "info@smithassociatespc.com"
+      },
+      "weakness_score": 56,
+      "site_high_count": 1,
+      "evidence": [
+        {
+          "id": "no_viewport",
+          "label": "No mobile viewport tag",
+          "confidence": "high",
+          "evidence_str": "The homepage has no mobile viewport tag, so it isn’t built to adapt to phone screens — mobile visitors get a zoomed-out desktop layout."
+        },
+        {
+          "id": "old_wordpress",
+          "label": "Outdated WordPress",
+          "confidence": "med",
+          "evidence_str": "The site runs WordPress 5.0.22 (current is 6.x) — an out-of-date, unmaintained CMS with known security holes."
+        }
+      ],
+      "draft_observation": "Smith And Associates, P.C.'s site isn’t built to adapt to phone screens, so on mobile it shows up as a zoomed-out desktop layout.",
+      "observation_cited_signal": "no_viewport",
+      "observation_source": "fallback",
+      "observation_lang": "en",
+      "email_verified": "mx_ok",
+      "verified_email": "info@smithassociatespc.com",
+      "source": "SalesNav/Clay",
+      "domain_provisional": false,
+      "hs_company_id": "",
+      "person_linkedin": "https://www.linkedin.com/in/ACwAAAEmRUYBvXdw3ZwEthrftnZ-vVVXrAt98yk/",
+      "company_linkedin": "https://www.linkedin.com/company/1004384",
+      "employee_count": "5",
+      "company_size": "2-10 employees",
+      "industry": "Accounting",
+      "description": "We are a Certified Public Accounting firm that specializes in providing monthly accounting and tax services to small businesses for a fixed monthly fee. Whether you are looking for someone to maintain your accounting records, or looking for someone to review your internal QuickBo",
+      "founded": "",
+      "annual_revenue": "500K-1M",
+      "follower_count": "34",
+      "dedupe_key": "smithassociatespc.com",
+      "queue_date": "2026-06-22"
     }
   ]
 }

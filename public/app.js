@@ -16,7 +16,7 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-let DATA = { queue: [], research: [] };
+let DATA = { queue: [], all: [], research: [] };
 let VIEW = 'queue';
 let FILTERS = { text: '', vertical: '', city: '', email: '' };
 let DISPOS = loadDispos();
@@ -30,10 +30,12 @@ let SITES = (() => { try { return JSON.parse(localStorage.getItem('magni2_sites'
 function saveSites() { try { localStorage.setItem('magni2_sites', JSON.stringify(SITES)); } catch {} }
 
 async function boot() {
-  const [q, r] = await Promise.all([fetchJson('./data.json'), fetchJson('./research.json')]);
+  const [q, a, r] = await Promise.all([fetchJson('./data.json'), fetchJson('./all.json'), fetchJson('./research.json')]);
   DATA.queue = (q && (q.practices || q)) || [];
+  DATA.all = (a && (a.practices || a)) || [];
   DATA.research = (r && (r.leads || r)) || [];
   $('n-queue').textContent = DATA.queue.length;
+  $('n-all').textContent = DATA.all.length;
   $('n-research').textContent = DATA.research.length;
   populateFilters();
   wire();
@@ -45,7 +47,7 @@ function wire() {
   document.querySelectorAll('.tab').forEach((t) => t.onclick = () => {
     VIEW = t.dataset.view;
     document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('active', x === t));
-    $('lede-queue').hidden = VIEW !== 'queue';
+    $('lede-queue').hidden = VIEW === 'research';
     $('lede-research').hidden = VIEW !== 'research';
     render();
   });
@@ -103,7 +105,7 @@ function downloadCsv() {
 }
 
 function populateFilters() {
-  const all = [...DATA.queue, ...DATA.research];
+  const all = [...DATA.queue, ...DATA.all, ...DATA.research];
   const verts = [...new Set(all.map((p) => (p.practice_type || '').replace(/_/g, ' ')).filter(Boolean))].sort();
   const cities = [...new Set(all.map((p) => p.city).filter(Boolean))].sort();
   for (const v of verts) $('f-vertical').add(new Option(v, v));
@@ -125,7 +127,7 @@ function render() {
   const list = DATA[VIEW].filter(matches);
   if (!list.length) { $('empty').hidden = false; updateCounts(); return; }
   $('empty').hidden = true;
-  list.forEach((p) => root.appendChild(VIEW === 'queue' ? queueCard(p) : researchCard(p)));
+  list.forEach((p) => root.appendChild(VIEW === 'research' ? researchCard(p) : queueCard(p)));
   updateCounts();
 }
 
