@@ -11,6 +11,7 @@
     <div class="brand">
       <span class="wordmark">Magni<span class="dot">.</span></span>
       <span class="sub">Daily Review Queue</span>
+      <button class="howbtn" id="how-open" title="How Magni works">How it works</button>
     </div>
     <div class="toolbar">
       <div class="counts">
@@ -59,6 +60,61 @@
       <p id="empty-msg">No practices match these filters.</p>
     </div>
   </main>
+
+  <div id="how" class="modal" hidden>
+    <div class="modal-card">
+      <button class="modal-x" id="how-close" aria-label="Close">×</button>
+      <h2>How Magni works</h2>
+      <p class="how-lede">Every morning the tool hands you a fresh set of small practices with a genuinely
+        weak website — each with one true thing wrong and a first line drafted. You confirm it, put it in
+        your words, and send it yourself. <b>The tool finds and checks; you write and send.</b></p>
+
+      <h3>Where leads come from</h3>
+      <ul>
+        <li><b>Already loaded:</b> a few hundred qualified practices are here now — a couple weeks of work.</li>
+        <li><b>Adding more:</b> paste new finds into the <b>Magni import Google Sheet</b> (one row each —
+          at minimum a company + website). That sheet is your inbox; overnight the tool checks them and adds
+          the good ones. Use <b>Sheet headers</b> for the columns.</li>
+      </ul>
+
+      <h3>What it does to each practice (overnight)</h3>
+      <ul>
+        <li>Opens their site and runs objective checks — no HTTPS, not mobile-friendly, slow, stale
+          copyright, thin page, no booking, dead links.</li>
+        <li>Keeps only the ones with a <b>real, checked weakness</b> (clean sites are dropped).</li>
+        <li>Drafts <b>one true opening line</b> — it can only say what it actually verified, so it never
+          makes something up.</li>
+        <li>Grabs the contact email off the site and flags whether it looks valid.</li>
+      </ul>
+
+      <h3>Your two tabs</h3>
+      <ul>
+        <li><b>Today's queue</b> — qualified practices with findings + a drafted line. Your daily work.</li>
+        <li><b>Research · no site</b> — no website found. Open their LinkedIn; if you find a site, paste it
+          on the card and it gets checked.</li>
+      </ul>
+
+      <h3>Working a card</h3>
+      <ol>
+        <li>Read the <b>checked findings</b> — the true things wrong with their site.</li>
+        <li>Read the <b>draft line</b>, open their site to confirm it's true, and rewrite it in your voice.
+          <i>The draft is a running start; your rewrite is the work.</i></li>
+        <li><b>Copy</b> it (and the email), paste into your own email, and <b>send it yourself.</b></li>
+        <li>Hit <b>Mark sent</b> (or Skip).</li>
+        <li>At day's end, <b>Download CSV</b> → paste into the Magni CRM sheet. That sheet is your record.</li>
+      </ol>
+
+      <h3>Worth knowing</h3>
+      <ul>
+        <li><b>You won't lose leads</b> — sent ones retire, skipped come back in 30 days, untouched ones stay.</li>
+        <li><b>Notes</b> live on each card (and ride along in your CSV). <b>More info</b> shows size, industry, revenue, LinkedIn.</li>
+        <li><b>It refreshes itself every morning</b> — just open the page.</li>
+      </ul>
+
+      <p class="how-rule"><b>The one rule:</b> the tool finds the practice, checks the site, and drafts the
+        line — <b>you always confirm and send.</b> It never reaches out to anyone on its own.</p>
+    </div>
+  </div>
 
   <div id="toast" class="toast" hidden></div>
   <script src="app.js"></script>

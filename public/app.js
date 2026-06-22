@@ -61,6 +61,11 @@ function wire() {
   $('export').onclick = exportDispositions;
   $('download').onclick = downloadCsv;
   $('template').onclick = downloadTemplate;
+  const how = $('how');
+  $('how-open').onclick = () => { how.hidden = false; };
+  $('how-close').onclick = () => { how.hidden = true; };
+  how.onclick = (e) => { if (e.target === how) how.hidden = true; };
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') how.hidden = true; });
 }
 
 // Blank import template with the exact headers (company + website required).

@@ -31,6 +31,21 @@ body {
 .wordmark { font-size: 22px; font-weight: 800; letter-spacing: -.02em; color: var(--accent-deep); }
 .wordmark .dot { color: var(--accent); }
 .sub { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.howbtn { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; color: var(--accent-deep); background: #eef4f8; border: 1px solid #dbe7ef; border-radius: 20px; padding: 3px 11px; }
+.howbtn:hover { background: #e2eef5; }
+
+/* ── how-it-works modal ── */
+.modal { position: fixed; inset: 0; z-index: 20; background: rgba(22,36,44,.45); display: flex; align-items: flex-start; justify-content: center; padding: 5vh 16px; overflow-y: auto; }
+.modal[hidden] { display: none; }
+.modal-card { background: #fff; max-width: 640px; width: 100%; border-radius: 14px; padding: 26px 30px 30px; box-shadow: 0 12px 48px rgba(0,0,0,.3); position: relative; }
+.modal-card h2 { margin: 0 0 6px; color: var(--accent-deep); font-size: 22px; }
+.modal-card h3 { margin: 20px 0 6px; font-size: 14px; color: var(--accent-deep); }
+.modal-card ul, .modal-card ol { margin: 0; padding-left: 20px; }
+.modal-card li { margin: 4px 0; font-size: 14px; line-height: 1.5; }
+.how-lede { font-size: 15px; color: var(--ink); margin: 0 0 4px; }
+.how-rule { margin-top: 18px; padding: 12px 14px; background: #f8fafb; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; }
+.modal-x { position: absolute; top: 12px; right: 14px; border: none; background: none; font-size: 26px; line-height: 1; color: var(--muted); cursor: pointer; }
+.modal-x:hover { color: var(--ink); }
 .toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .counts { display: flex; gap: 14px; font-size: 13px; color: var(--muted); }
 .counts b { color: var(--ink); font-size: 15px; }
