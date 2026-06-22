@@ -66,8 +66,8 @@ auto-matched — double-check it's really theirs before sending).
 Sent ones retire; skipped ones return in 30 days; anything you don't touch stays
 and comes back next time. There are hundreds queued behind today's view.
 
-**Adding leads:** drop new finds into `inbox.csv` (or a fresh Clay batch via
-`build_enriched.py`) and the next run qualifies them.
+**Adding leads:** paste new finds into the import **Google Sheet** (use the
+**Sheet headers** button for the columns); the next run qualifies them.
 
 ---
 
@@ -134,21 +134,26 @@ state/
 public/                   ← the review page (static site) + data.json + daily-list.csv
 ```
 
-## Bringing in a new batch (Clay enrichment)
+## Bringing in new leads — the import Google Sheet
 
-The CRM is the spreadsheet. There's no other system to maintain. New leads come
-from a Sales Navigator scrape, enriched in Clay for **website + email**:
+The CRM is the spreadsheet, and so is the inbox. New leads go into a **Google
+Sheet**; the daily run reads it automatically (no terminal, no upload).
 
-1. Scrape Sales Nav (see the target-market searches you've been using).
-2. Enrich in **Clay** — company **domain/website** + **work email**. *(Don't
-   bother with site-quality checks; Magni does that.)*
-3. Drop the export in `Lists/`, run **`python3 build_enriched.py`** — it filters to
-   ICP, dedupes, and writes `state/keepers_enriched.csv` (+ a `research_leads.csv`
-   for no-website practices).
-4. `python3 run.py` — qualifies, observes, verifies, dedupes → the daily queue.
+**Set up once:**
+1. Make a Google Sheet. Row 1 = the headers from the tool's **Sheet headers**
+   button: `company, website, email, contact_name, title, city, state`
+   (only `company` + `website` are required).
+2. **File → Share → Publish to web → (this sheet) → CSV** → copy the link.
+3. Add it as a GitHub Actions secret named **`SHEET_CSV_URL`**
+   (repo → Settings → Secrets and variables → Actions).
 
-For one-off finds, just add a row to `inbox.csv` (only `company` + `website`
-required) and run.
+**Then, forever after:** paste new finds (or a Clay/Sales Nav export's columns)
+into the sheet. The nightly run pulls it, qualifies, and they appear in the queue.
+To pull sooner, trigger the Action manually (Actions → Daily review queue → Run).
+
+Discovery is still Sales Nav → **Clay** (resolve **domain + work email**; skip
+site-quality checks — Magni does those). Paste Clay's output columns into the
+sheet. Local `inbox.csv` + `build_enriched.py` still work if you ever want them.
 
 ## What it deliberately does NOT do
 

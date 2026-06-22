@@ -60,7 +60,6 @@ function wire() {
   };
   $('export').onclick = exportDispositions;
   $('download').onclick = downloadCsv;
-  $('import-file').onchange = importLeads;
   $('template').onclick = downloadTemplate;
 }
 
@@ -72,23 +71,7 @@ function downloadTemplate() {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
   a.download = 'magni-import-template.csv'; a.click(); URL.revokeObjectURL(a.href);
-  toast('Template downloaded — keep the header row, replace the example');
-}
-
-// Import a lead CSV from the tool (no terminal). Hands off to /api/upload, which
-// commits the file + triggers the pipeline; new leads appear after it reruns.
-async function importLeads(e) {
-  const file = e.target.files && e.target.files[0];
-  e.target.value = '';
-  if (!file) return;
-  toast('Uploading ' + file.name + '…');
-  const fd = new FormData(); fd.append('file', file);
-  try {
-    const r = await fetch('/api/upload', { method: 'POST', body: fd });
-    const d = await r.json().catch(() => ({ ok: r.ok }));
-    if (d.ok) toast(`Imported ${d.rows ?? ''} rows — processing now; new leads appear in a few minutes.`);
-    else toast('Import failed: ' + (d.error || 'unavailable'));
-  } catch { toast('Import failed (offline)'); }
+  toast('Headers downloaded — put these as row 1 of your import Google Sheet');
 }
 
 // Build the day's list as CSV — in the CRM's columns, carrying her edited

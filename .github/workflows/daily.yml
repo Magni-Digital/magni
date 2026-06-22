@@ -42,8 +42,20 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Ingest any uploaded lead batches
-        run: python3 build_enriched.py || echo "no new Lists exports to ingest"
+      - name: Pull leads from the Google import sheet
+        env:
+          SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
+        run: |
+          if [ -n "$SHEET_CSV_URL" ]; then
+            mkdir -p Lists
+            curl -sSL "$SHEET_CSV_URL" -o "Lists/sheet-export.csv" \
+              && echo "pulled $(($(wc -l < Lists/sheet-export.csv)-1)) rows from the sheet"
+          else
+            echo "SHEET_CSV_URL not set — skipping sheet pull"
+          fi
+
+      - name: Ingest leads (sheet + any local exports)
+        run: python3 build_enriched.py || echo "nothing new to ingest"
 
       - name: Build today's queue
         env:
