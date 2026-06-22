@@ -31,13 +31,22 @@ SAAS_TLDS = (".io", ".app", ".ai", ".dev", ".tech", ".so", ".xyz", ".health")
 SAAS_RE = re.compile(r"\b(app|saas|platform|software|fintech|healthtech|medtech|"
                      r"startup|api|mobile app|web app|marketplace|ai-powered|ai powered)\b", re.I)
 
-# unified field -> Clay/source column
+# unified field -> accepted source column names (matched case-insensitively, so
+# both Clay exports and the simple uploaded template work)
 FIELDS = {
-    "company": ("Name", "companyName"), "title": ("title",), "contact_name": ("fullName",),
-    "person_linkedin": ("personLinkedinUrl",), "company_linkedin": ("companyLinkedinUrl",),
-    "website": ("Website",), "employee_count": ("Employee Count",), "size": ("Size",),
-    "industry": ("Industry",), "description": ("Description",), "founded": ("Founded",),
-    "annual_revenue": ("Annual Revenue",), "follower_count": ("Follower Count",),
+    "company": ("Name", "companyName", "company"),
+    "title": ("title", "Title", "role", "Role"),
+    "contact_name": ("fullName", "contact_name", "Contact Name", "contact"),
+    "email": ("Work Email", "email", "Email"),
+    "website": ("Website", "website", "Domain", "domain", "Website URL", "url"),
+    "person_linkedin": ("personLinkedinUrl", "person_linkedin", "linkedin"),
+    "company_linkedin": ("companyLinkedinUrl", "company_linkedin"),
+    "employee_count": ("Employee Count", "employee_count", "employees"),
+    "size": ("Size", "size"), "industry": ("Industry", "industry", "vertical"),
+    "description": ("Description", "description", "notes"),
+    "founded": ("Founded", "founded"), "annual_revenue": ("Annual Revenue", "annual_revenue"),
+    "follower_count": ("Follower Count", "follower_count"),
+    "city": ("city", "City", "Locality"), "state": ("state", "State"),
 }
 OUT_COLS = ["hs_company_id", "company", "domain", "website", "email", "contact_name",
             "title", "city", "state", "practice_type", "source", "person_linkedin",
@@ -46,9 +55,11 @@ OUT_COLS = ["hs_company_id", "company", "domain", "website", "email", "contact_n
 
 
 def g(row, field):
+    low = {(k or "").strip().lower(): v for k, v in row.items()}
     for c in FIELDS.get(field, ()):
-        if (row.get(c) or "").strip():
-            return row[c].strip()
+        v = low.get(c.lower())
+        if v and v.strip():
+            return v.strip()
     return ""
 
 
@@ -75,8 +86,9 @@ def rec(row, domain):
     return {
         "hs_company_id": "", "company": name, "domain": domain,
         "website": g(row, "website") or ("https://" + domain if domain else ""),
-        "email": "", "contact_name": g(row, "contact_name"), "title": g(row, "title"),
-        "city": l.split(",")[0].strip(), "state": (l.split(",")[1].strip() if "," in l else ""),
+        "email": g(row, "email"), "contact_name": g(row, "contact_name"), "title": g(row, "title"),
+        "city": g(row, "city") or l.split(",")[0].strip(),
+        "state": g(row, "state") or (l.split(",")[1].strip() if "," in l else ""),
         "practice_type": classify(f"{name} {g(row,'industry')} {g(row,'description')[:200]}"),
         "source": "SalesNav/Clay", "person_linkedin": g(row, "person_linkedin"),
         "company_linkedin": g(row, "company_linkedin"), "employee_count": g(row, "employee_count"),
@@ -145,7 +157,7 @@ def main():
     for r in rows:
         name = g(r, "company")
         desc = g(r, "description")[:300]
-        dom = domain_from_url(r.get("Domain") or r.get("Website") or "")
+        dom = domain_from_url(g(r, "website"))
         if dom and is_saas(name, dom, desc):
             drop["saas/app"] += 1; continue
         if not emp_ok(r):

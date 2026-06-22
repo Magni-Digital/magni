@@ -61,6 +61,18 @@ function wire() {
   $('export').onclick = exportDispositions;
   $('download').onclick = downloadCsv;
   $('import-file').onchange = importLeads;
+  $('template').onclick = downloadTemplate;
+}
+
+// Blank import template with the exact headers (company + website required).
+function downloadTemplate() {
+  const headers = ['company', 'website', 'email', 'contact_name', 'title', 'city', 'state'];
+  const example = ['Bright Smile Dental', 'https://brightsmiledental.com', 'owner@brightsmiledental.com', 'Dr. Lena Ruiz', 'Owner', 'Austin', 'TX'];
+  const csv = [headers, example].map((r) => r.map((c) => '"' + c + '"').join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+  a.download = 'magni-import-template.csv'; a.click(); URL.revokeObjectURL(a.href);
+  toast('Template downloaded — keep the header row, replace the example');
 }
 
 // Import a lead CSV from the tool (no terminal). Hands off to /api/upload, which
